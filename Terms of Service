@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service | Custom Cleaning RVA</title>
+<meta name="description" content="Custom Cleaning RVA Terms of Service — the terms and conditions governing use of our services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1f2d;--teal:#1a9e8f;--teal-light:#22c4b2;--teal-pale:#e6f7f5;--cream:#faf9f6;--white:#fff;--gray:#6b7280;--border:#e5e7eb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);line-height:1.7}
+
+nav{background:var(--navy);padding:0 2rem;height:66px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.2)}
+.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.nav-logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--teal),#1a3a4a);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.nav-logo-text{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.15rem;color:#fff;line-height:1.1}
+.nav-logo-sub{font-size:.6rem;color:var(--teal-light);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.nav-back{font-size:.82rem;color:rgba(255,255,255,.6);text-decoration:none;display:flex;align-items:center;gap:.4rem;padding:.4rem .8rem;border-radius:7px;border:1px solid rgba(255,255,255,.15);transition:all .2s}
+.nav-back:hover{color:#fff;border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.07)}
+
+.hero{background:var(--navy);padding:64px 2rem 52px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 110%,rgba(26,158,143,.18) 0%,transparent 60%)}
+.hero-content{position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(26,158,143,.15);border:1px solid rgba(26,158,143,.3);color:var(--teal-light);padding:.3rem .85rem;border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:1.25rem}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;color:#fff;margin-bottom:.6rem}
+.hero p{color:rgba(255,255,255,.5);font-size:.9rem}
+
+.container{max-width:820px;margin:0 auto;padding:60px 2rem 80px}
+
+.toc{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:1.5rem 2rem;margin-bottom:3rem}
+.toc h3{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin-bottom:1rem}
+.toc ol{padding-left:1.25rem;display:grid;grid-template-columns:1fr 1fr;gap:.3rem .5rem}
+.toc li{font-size:.85rem}
+.toc a{color:var(--teal);text-decoration:none;transition:color .2s}
+.toc a:hover{color:var(--navy)}
+
+.updated{display:inline-flex;align-items:center;gap:.5rem;background:var(--teal-pale);color:var(--teal);font-size:.78rem;font-weight:700;padding:.35rem .9rem;border-radius:50px;margin-bottom:2.5rem}
+
+h2{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:700;color:var(--navy);margin:2.75rem 0 .75rem;padding-top:2rem;border-top:1.5px solid var(--border)}
+h2:first-of-type{border-top:none;margin-top:0;padding-top:0}
+h3{font-size:.95rem;font-weight:700;color:var(--navy);margin:1.5rem 0 .5rem}
+p{color:var(--gray);font-size:.93rem;margin-bottom:1rem}
+ul,ol.list{color:var(--gray);font-size:.93rem;margin-bottom:1rem;padding-left:1.5rem}
+li{margin-bottom:.45rem}
+strong{color:var(--navy)}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.highlight{background:var(--teal-pale);border-left:4px solid var(--teal);border-radius:0 10px 10px 0;padding:1.2rem 1.5rem;margin:1.5rem 0}
+.highlight p{color:var(--navy);margin:0;font-size:.9rem}
+.highlight p+p{margin-top:.5rem}
+
+.warn-box{background:#fff8f0;border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:1.2rem 1.5rem;margin:1.5rem 0}
+.warn-box p{color:#7c4a00;margin:0;font-size:.9rem}
+
+.contact-box{background:var(--navy);border-radius:14px;padding:2.25rem;margin-top:3.5rem;text-align:center}
+.contact-box h3{color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:.4rem}
+.contact-box p{color:rgba(255,255,255,.55);font-size:.88rem;margin-bottom:1.25rem}
+.contact-links{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+.contact-links a{color:var(--teal-light);font-weight:600;font-size:.9rem;text-decoration:none;transition:color .2s}
+.contact-links a:hover{color:#fff;text-decoration:none}
+
+footer{background:var(--navy);padding:1.5rem 2rem;text-align:center;color:rgba(255,255,255,.35);font-size:.78rem;border-top:1px solid rgba(255,255,255,.08)}
+footer a{color:rgba(255,255,255,.4);text-decoration:none;margin:0 .75rem;transition:color .2s}
+footer a:hover{color:var(--teal-light)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">✨</div>
+    <div><div class="nav-logo-text">Custom Cleaning</div><div class="nav-logo-sub">RVA</div></div>
+  </a>
+  <a href="index.html" class="nav-back">← Back to Website</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">📋 Legal</div>
+    <h1>Terms of Service</h1>
+    <p>The terms and conditions governing our services and your use of this website</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="updated">📅 Last Updated: March 2026</div>
+
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#services">Our Services</a></li>
+      <li><a href="#booking">Booking & Scheduling</a></li>
+      <li><a href="#cancellation">Cancellation Policy</a></li>
+      <li><a href="#pricing">Pricing & Payment</a></li>
+      <li><a href="#access">Home Access & Entry</a></li>
+      <li><a href="#guarantee">Satisfaction Guarantee</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#prohibited">Prohibited Uses</a></li>
+      <li><a href="#changes">Changes to Terms</a></li>
+      <li><a href="#governing">Governing Law</a></li>
+      <li><a href="#contact-us">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Please Read Carefully:</strong> By booking our services or using our website, you agree to these Terms of Service. If you do not agree, please do not use our services or website. These terms constitute a binding agreement between you and Custom Cleaning RVA.</p>
+  </div>
+
+  <h2 id="acceptance">1. Acceptance of Terms</h2>
+  <p>These Terms of Service ("Terms") govern your use of the Custom Cleaning RVA website at <strong>RVACustomCleaning.com</strong> and your engagement of our residential cleaning services. By accessing our website, submitting a booking request, or using our services, you confirm that you have read, understood, and agree to be bound by these Terms.</p>
+  <p>If you are booking services on behalf of another person or household, you represent that you have authority to bind that person or household to these Terms.</p>
+
+  <h2 id="services">2. Our Services</h2>
+  <p>Custom Cleaning RVA ("we," "us," "our") provides professional residential cleaning services in Richmond, Virginia and surrounding areas. Our service offerings include, but are not limited to:</p>
+  <ul>
+    <li><strong>Standard Clean</strong> — Routine cleaning of all rooms, surfaces, bathrooms, and common areas</li>
+    <li><strong>Deep Clean</strong> — Comprehensive top-to-bottom cleaning including appliances, baseboards, and detailed areas</li>
+    <li><strong>Move In / Move Out Clean</strong> — Full property cleaning for lease transitions</li>
+    <li><strong>Recurring Cleaning</strong> — Scheduled weekly, bi-weekly, or monthly cleaning service</li>
+    <li><strong>Add-On Services</strong> — Inside oven, inside refrigerator, interior windows, laundry, and other specialty cleaning upon request</li>
+  </ul>
+  <p>We reserve the right to decline or discontinue service at our discretion, including in cases of unsafe conditions, excessive clutter preventing proper cleaning, or conduct that is hostile or threatening toward our staff.</p>
+
+  <h2 id="booking">3. Booking & Scheduling</h2>
+  <p>All service bookings are subject to availability. Submitting a booking request does not guarantee a confirmed appointment. We will contact you within 24 hours to confirm your appointment date, time, and estimated price.</p>
+  <p>By submitting a booking request, you authorize Custom Cleaning RVA to contact you via phone, text message (SMS), or email using the contact information you provide for the purpose of confirming and managing your appointment.</p>
+  <div class="highlight">
+    <p><strong>Confirmation:</strong> Your booking is not confirmed until you receive a direct confirmation from us by phone, text, or email. We recommend confirming at least 48 hours before your scheduled appointment.</p>
+  </div>
+  <h3>Rescheduling</h3>
+  <p>You may reschedule your appointment at no charge with at least 24 hours' notice. Rescheduling requests made with less than 24 hours' notice are subject to our cancellation policy below.</p>
+
+  <h2 id="cancellation">4. Cancellation Policy</h2>
+  <p>We understand that life happens. Our cancellation policy is as follows:</p>
+  <ul>
+    <li><strong>24+ hours before appointment:</strong> Cancel or reschedule at no charge</li>
+    <li><strong>Less than 24 hours before appointment:</strong> A cancellation fee of up to 50% of the estimated service cost may apply</li>
+    <li><strong>Day-of cancellation or no-show:</strong> A cancellation fee of up to 100% of the estimated service cost may apply to cover our team's travel time and reserved scheduling</li>
+    <li><strong>Recurring clients:</strong> Consistent last-minute cancellations may result in removal from the recurring schedule</li>
+  </ul>
+  <div class="warn-box">
+    <p><strong>⚠️ Note:</strong> We reserve the right to waive cancellation fees at our discretion for genuine emergencies. Please contact us as soon as possible if an unexpected situation arises.</p>
+  </div>
+
+  <h2 id="pricing">5. Pricing & Payment</h2>
+  <p>All prices provided on our website are estimates only. Final pricing is confirmed before service begins and is based on the size of your home, the service selected, the actual condition of the property, and any agreed-upon add-ons.</p>
+  <h3>Price Adjustments</h3>
+  <p>We reserve the right to adjust the quoted price if the actual scope of work significantly differs from what was described at the time of booking (e.g., the home is in a substantially worse condition than typical, or additional rooms or services are requested on the day of service). We will notify you of any adjustment before proceeding.</p>
+  <h3>Payment</h3>
+  <p>Payment is due upon completion of each service unless a different arrangement has been agreed upon in writing. We accept cash, check, Venmo, Zelle, and other methods as communicated at time of booking. Unpaid invoices may be subject to a late fee and/or suspension of future services.</p>
+
+  <h2 id="access">6. Home Access & Entry</h2>
+  <p>You are responsible for providing safe, unobstructed access to your home on the scheduled service date. If our team is unable to access the property at the scheduled time due to locked access, failure to provide entry information, or hazardous conditions, this may be treated as a cancellation under our cancellation policy.</p>
+  <p>If you provide a key, entry code, or lockbox combination, you consent to our staff using this access solely for the purpose of providing the agreed-upon cleaning service. We treat all access credentials as strictly confidential.</p>
+  <h3>Safe Working Conditions</h3>
+  <p>Our team has the right to refuse to clean or to leave a property if they encounter unsafe or threatening conditions, including but not limited to: presence of rodents or infestations, biohazardous materials, aggressive animals (not secured), or hostile behavior. In such cases, a cancellation fee may apply.</p>
+
+  <h2 id="guarantee">7. Satisfaction Guarantee</h2>
+  <p>We stand behind our work. If you are not satisfied with any aspect of your cleaning, please contact us within <strong>24 hours</strong> of the completion of service. We will return to re-clean the specific areas in question at no additional charge.</p>
+  <p>Our guarantee applies to the specific areas and services included in your booking. It does not cover pre-existing damage, stains, or conditions that cannot be resolved through standard cleaning methods. It also does not apply if you request that we use specific products or methods against our professional recommendation.</p>
+
+  <h2 id="liability">8. Limitation of Liability</h2>
+  <p>Custom Cleaning RVA is fully insured and bonded. In the unlikely event of damage to your property caused by our team during the provision of services, please notify us within 48 hours and we will work with you and our insurance provider to resolve the matter.</p>
+  <p>We are not liable for:</p>
+  <ul>
+    <li>Pre-existing damage, scratches, or wear not caused by our cleaning</li>
+    <li>Damage resulting from fragile, unstable, or improperly assembled items</li>
+    <li>Damage to items not disclosed at the time of booking (e.g., delicate surfaces requiring special care)</li>
+    <li>Loss of items not related to our cleaning service</li>
+    <li>Indirect, incidental, or consequential damages arising from our services</li>
+  </ul>
+  <p>Our total liability for any claim related to our services is limited to the amount paid for the specific cleaning visit in question.</p>
+
+  <h2 id="prohibited">9. Prohibited Uses</h2>
+  <p>When using our website, you agree not to:</p>
+  <ul>
+    <li>Provide false or misleading information when making a booking</li>
+    <li>Use the website to transmit any unlawful, harmful, or spam content</li>
+    <li>Attempt to interfere with the proper functioning of the website</li>
+    <li>Use our contact forms or booking system for any purpose other than genuine service inquiries</li>
+  </ul>
+
+  <h2 id="changes">10. Changes to These Terms</h2>
+  <p>We reserve the right to update or modify these Terms of Service at any time. When we do, we will update the "Last Updated" date at the top of this page. Your continued use of our website or services after any such changes constitutes your acceptance of the updated Terms. We encourage you to review this page periodically.</p>
+
+  <h2 id="governing">11. Governing Law</h2>
+  <p>These Terms of Service are governed by and construed in accordance with the laws of the Commonwealth of Virginia, without regard to its conflict of law provisions. Any disputes arising out of or related to these Terms or our services shall be resolved in the courts located in Richmond, Virginia, and you consent to the personal jurisdiction of such courts.</p>
+  <p>We will always attempt to resolve disputes informally first — please contact us before initiating any formal proceedings.</p>
+
+  <h2 id="contact-us">12. Contact Us</h2>
+  <p>If you have any questions, concerns, or disputes related to these Terms of Service, please contact us directly. We're always happy to work things out.</p>
+
+  <div class="contact-box">
+    <h3>Custom Cleaning RVA</h3>
+    <p>Questions about our terms? Reach out — we're a real local business and always happy to talk.</p>
+    <div class="contact-links">
+      <a href="tel:8048145491">📞 (804) 814-5491</a>
+      <a href="mailto:customcleaningrva@gmail.com">✉️ customcleaningrva@gmail.com</a>
+      <a href="index.html#contact">📬 Contact Form</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 Custom Cleaning RVA · All rights reserved ·
+  <a href="index.html">Home</a>
+  <a href="privacy-policy.html">Privacy Policy</a>
+  <a href="terms-of-service.html">Terms of Service</a>
+</footer>
+
+</body>
+</html>
