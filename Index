@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Cleaning RVA | Professional House Cleaning in Richmond, VA</title>
+<meta name="description" content="Richmond's trusted residential cleaning service. Book online, get an instant quote, and enjoy a spotless home. Serving RVA and surrounding areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#0d1f2d; --teal:#1a9e8f; --teal-light:#22c4b2; --teal-pale:#e6f7f5;
+  --cream:#faf9f6; --white:#ffffff; --gray:#6b7280; --gray-light:#f3f4f6;
+  --border:#e5e7eb; --gold:#c9a84c; --red:#ef4444; --red-l:#fee2e2;
+  --green:#16a34a; --green-l:#dcfce7; --yellow-l:#fef9c3;
+  --shadow:0 4px 24px rgba(13,31,45,.10); --shadow-lg:0 12px 48px rgba(13,31,45,.18);
+  --r:12px; --r-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);line-height:1.6;overflow-x:hidden}
+
+/* ── NAVBAR ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .3s}
+nav.scrolled{box-shadow:var(--shadow)}
+.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.nav-logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--teal),var(--navy));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.nav-logo-text{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.25rem;color:var(--navy);line-height:1.1}
+.nav-logo-sub{font-size:.65rem;color:var(--teal);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:.25rem}
+.nav-links a{padding:.5rem .85rem;border-radius:8px;text-decoration:none;font-size:.88rem;font-weight:500;color:var(--gray);transition:all .2s}
+.nav-links a:hover{color:var(--teal);background:var(--teal-pale)}
+.nav-cta{background:var(--teal)!important;color:var(--white)!important;padding:.55rem 1.2rem!important;border-radius:8px!important;font-weight:600!important}
+.nav-cta:hover{background:var(--teal-light)!important}
+.nav-admin{background:transparent!important;color:var(--gray)!important;border:1px solid var(--border)!important;font-size:.78rem!important;padding:.4rem .8rem!important}
+.nav-admin:hover{border-color:var(--teal)!important;color:var(--teal)!important;background:var(--teal-pale)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+.hamburger span{width:22px;height:2px;background:var(--navy);border-radius:2px;transition:.3s;display:block}
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:1rem 1.5rem;z-index:999;flex-direction:column;gap:.5rem;box-shadow:var(--shadow)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:.75rem 1rem;border-radius:8px;text-decoration:none;font-weight:500;color:var(--navy);transition:background .2s}
+.mobile-menu a:hover{background:var(--teal-pale);color:var(--teal)}
+
+/* ── PAGES ── */
+.page{display:none}
+.page.active{display:block}
+
+/* ── HERO ── */
+.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 2rem 80px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 70% 40%,rgba(26,158,143,.22) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 20% 80%,rgba(26,158,143,.1) 0%,transparent 50%)}
+.hero-grid{position:absolute;inset:0;opacity:.06;background-image:linear-gradient(var(--teal) 1px,transparent 1px),linear-gradient(90deg,var(--teal) 1px,transparent 1px);background-size:60px 60px}
+.hero-content{max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:1;display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(26,158,143,.15);border:1px solid rgba(26,158,143,.3);color:var(--teal-light);padding:.35rem .9rem;border-radius:50px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:700;color:var(--white);line-height:1.05;margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--teal-light)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:520px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn-primary{background:var(--teal);color:var(--white);padding:.85rem 2rem;border-radius:var(--r);font-weight:600;font-size:1rem;text-decoration:none;border:none;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem;box-shadow:0 4px 20px rgba(26,158,143,.4);font-family:'DM Sans',sans-serif}
+.btn-primary:hover{background:var(--teal-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,158,143,.5)}
+.btn-outline{background:transparent;color:var(--white);padding:.85rem 2rem;border-radius:var(--r);font-weight:600;font-size:1rem;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem;font-family:'DM Sans',sans-serif}
+.btn-outline:hover{border-color:var(--teal-light);color:var(--teal-light)}
+.hero-stats{display:flex;gap:2.5rem}
+.hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--white);line-height:1}
+.hero-stat-lbl{font-size:.78rem;color:rgba(255,255,255,.5);font-weight:500}
+
+/* QUOTE CARD */
+.quote-card{background:var(--white);border-radius:var(--r-lg);padding:2rem;box-shadow:var(--shadow-lg)}
+.quote-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--navy);margin-bottom:.25rem}
+.quote-card p{font-size:.85rem;color:var(--gray);margin-bottom:1.5rem}
+.form-group{margin-bottom:1rem}
+.form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:.4rem}
+.form-group select,.form-group input,.form-group textarea{width:100%;padding:.7rem .95rem;border:1.5px solid var(--border);border-radius:var(--r);font-family:'DM Sans',sans-serif;font-size:.92rem;color:var(--navy);background:var(--white);outline:none;transition:border .2s;appearance:none}
+.form-group select:focus,.form-group input:focus,.form-group textarea:focus{border-color:var(--teal)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.quote-result{background:var(--teal-pale);border-radius:var(--r);padding:1rem 1.2rem;margin:1rem 0;display:none;border-left:3px solid var(--teal)}
+.quote-result.show{display:block}
+.quote-result-price{font-size:1.6rem;font-weight:700;color:var(--teal);font-family:'Cormorant Garamond',serif}
+.quote-result-note{font-size:.78rem;color:var(--gray)}
+.btn-full{width:100%;justify-content:center}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--white);border-bottom:1px solid var(--border);padding:1.1rem 2rem}
+.trust-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.6rem;font-size:.85rem;font-weight:500;color:var(--gray)}
+.trust-icon{font-size:1.1rem}
+
+/* ── SECTIONS ── */
+section{padding:100px 2rem}
+.container{max-width:1200px;margin:0 auto}
+.section-tag{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.75rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:1rem}
+.section-sub{font-size:1rem;color:var(--gray);max-width:540px;line-height:1.7}
+.section-header{margin-bottom:3.5rem}
+.section-header.centered{text-align:center}
+.section-header.centered .section-sub{margin:0 auto}
+
+/* ── SERVICES ── */
+#services{background:var(--white)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.service-card{border:1.5px solid var(--border);border-radius:var(--r-lg);padding:2rem 1.75rem;position:relative;overflow:hidden;transition:all .3s;background:var(--cream)}
+.service-card:hover{border-color:var(--teal);box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.service-card.featured{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.service-card.featured .service-title{color:var(--white)}
+.service-card.featured .service-desc{color:rgba(255,255,255,.6)}
+.service-card.featured .service-price{color:var(--teal-light)}
+.service-card.featured .service-includes li{color:rgba(255,255,255,.65)}
+.service-card.featured .service-includes li::before{color:var(--teal-light)}
+.service-card.featured .popular-tag{display:inline-block}
+.popular-tag{display:none;position:absolute;top:1.2rem;right:1.2rem;background:var(--teal);color:var(--white);font-size:.7rem;font-weight:700;padding:.2rem .65rem;border-radius:50px;letter-spacing:.06em;text-transform:uppercase}
+.service-emoji{font-size:2.2rem;margin-bottom:1.2rem;display:block}
+.service-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.service-desc{font-size:.88rem;color:var(--gray);margin-bottom:1.2rem;line-height:1.6}
+.service-price{font-size:1.5rem;font-weight:700;color:var(--teal);font-family:'Cormorant Garamond',serif;margin-bottom:1rem}
+.service-price span{font-size:.85rem;font-weight:400;color:var(--gray);font-family:'DM Sans',sans-serif}
+.service-includes{list-style:none}
+.service-includes li{font-size:.82rem;color:var(--gray);padding:.2rem 0}
+.service-includes li::before{content:'✓ ';color:var(--teal);font-weight:700}
+
+/* ── PROCESS ── */
+#process{background:var(--navy)}
+#process .section-tag{color:var(--teal-light)}
+#process .section-title{color:var(--white)}
+#process .section-sub{color:rgba(255,255,255,.55)}
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.process-step{text-align:center;padding:2rem 1.5rem;position:relative}
+.process-step::after{content:'→';position:absolute;right:-1.5rem;top:2.5rem;font-size:1.5rem;color:rgba(26,158,143,.4)}
+.process-step:last-child::after{display:none}
+.step-num{width:56px;height:56px;border-radius:50%;background:rgba(26,158,143,.15);border:1.5px solid rgba(26,158,143,.4);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--teal-light);margin:0 auto 1.25rem}
+.step-title{font-weight:700;color:var(--white);margin-bottom:.5rem}
+.step-desc{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* ── BOOKING ── */
+#booking{background:var(--cream)}
+.booking-layout{display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:start}
+.booking-info h2{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--navy);margin-bottom:1rem}
+.booking-info p{color:var(--gray);margin-bottom:2rem;line-height:1.7}
+.booking-perks{display:flex;flex-direction:column;gap:.9rem}
+.perk{display:flex;align-items:flex-start;gap:.9rem}
+.perk-icon{font-size:1.3rem;flex-shrink:0;margin-top:.1rem}
+.perk-title{font-weight:600;color:var(--navy);font-size:.92rem}
+.perk-desc{font-size:.82rem;color:var(--gray)}
+.booking-form-card{background:var(--white);border-radius:var(--r-lg);padding:2.5rem 2rem;box-shadow:var(--shadow-lg);border:1px solid var(--border)}
+.booking-form-card h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;margin-bottom:.25rem}
+.booking-form-card>p{font-size:.85rem;color:var(--gray);margin-bottom:1.75rem}
+.form-success{display:none;background:var(--teal-pale);border:1.5px solid var(--teal);border-radius:var(--r);padding:1.5rem;text-align:center}
+.form-success.show{display:block}
+.form-success h4{color:var(--teal);font-size:1.2rem;font-weight:700;margin-bottom:.5rem}
+.form-success p{color:var(--gray);font-size:.9rem}
+
+/* ── TESTIMONIALS ── */
+#testimonials{background:var(--white)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.testimonial-card{background:var(--cream);border-radius:var(--r-lg);padding:2rem;border:1.5px solid var(--border);transition:all .3s}
+.testimonial-card:hover{border-color:var(--teal);box-shadow:var(--shadow)}
+.testimonial-stars{color:var(--gold);font-size:1rem;margin-bottom:1rem;letter-spacing:.05em}
+.testimonial-text{font-size:.92rem;color:var(--navy);line-height:1.7;margin-bottom:1.5rem;font-style:italic}
+.testimonial-author{display:flex;align-items:center;gap:.75rem}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--navy));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--white);font-size:.95rem;flex-shrink:0}
+.testimonial-name{font-weight:700;font-size:.88rem;color:var(--navy)}
+.testimonial-location{font-size:.78rem;color:var(--gray)}
+
+/* ── FAQ ── */
+#faq{background:var(--cream)}
+.faq-layout{display:grid;grid-template-columns:360px 1fr;gap:4rem;align-items:start}
+.faq-sidebar h2{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--navy);margin-bottom:1rem}
+.faq-sidebar p{color:var(--gray);line-height:1.7;margin-bottom:2rem}
+.faq-contact-block{background:var(--navy);border-radius:var(--r-lg);padding:1.75rem;color:var(--white)}
+.faq-contact-block p{color:rgba(255,255,255,.7);font-size:.88rem;margin-bottom:1rem}
+.faq-contact-link{display:flex;align-items:center;gap:.5rem;color:var(--teal-light);font-size:.9rem;font-weight:600;text-decoration:none;margin-bottom:.6rem}
+.faq-contact-link:hover{color:var(--white)}
+.faq-list{display:flex;flex-direction:column;gap:.75rem}
+.faq-item{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden}
+.faq-item.open{border-color:var(--teal)}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;cursor:pointer;font-weight:600;font-size:.95rem;color:var(--navy);gap:1rem;transition:background .2s}
+.faq-question:hover{background:var(--teal-pale)}
+.faq-icon{width:26px;height:26px;border-radius:50%;background:var(--teal-pale);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;flex-shrink:0;transition:transform .3s,background .2s}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--teal);color:var(--white)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;padding:0 1.5rem;font-size:.9rem;color:var(--gray);line-height:1.7}
+.faq-answer.open{max-height:200px;padding:0 1.5rem 1.25rem}
+
+/* ── AREAS ── */
+#areas{background:var(--navy);padding:80px 2rem}
+#areas .section-tag{color:var(--teal-light)}
+#areas .section-title{color:var(--white)}
+#areas .section-sub{color:rgba(255,255,255,.55)}
+.areas-grid{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.area-tag{background:rgba(26,158,143,.12);border:1px solid rgba(26,158,143,.25);color:rgba(255,255,255,.8);padding:.5rem 1.1rem;border-radius:50px;font-size:.88rem;font-weight:500;transition:all .2s}
+.area-tag:hover{background:rgba(26,158,143,.25);border-color:var(--teal);color:var(--white)}
+
+/* ── CONTACT ── */
+#contact{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-info h2{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--navy);margin-bottom:1rem}
+.contact-info p{color:var(--gray);line-height:1.7;margin-bottom:2.5rem}
+.contact-methods{display:flex;flex-direction:column;gap:1.25rem}
+.contact-method{display:flex;align-items:center;gap:1rem}
+.contact-method-icon{width:48px;height:48px;border-radius:12px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.contact-method-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gray)}
+.contact-method-value{font-weight:600;color:var(--navy)}
+.contact-form-card{background:var(--cream);border-radius:var(--r-lg);padding:2.5rem 2rem;border:1.5px solid var(--border)}
+.contact-form-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;margin-bottom:1.5rem}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);color:#fff;padding:0}
+.footer-inner{max-width:1200px;margin:0 auto;padding:4rem 2rem 2rem}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand p{font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.7;max-width:260px;margin-top:.75rem}
+.footer-social{display:flex;gap:.5rem;margin-top:1.5rem}
+.social-btn{width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;font-size:.9rem;transition:all .2s}
+.social-btn:hover{background:rgba(26,158,143,.25);border-color:var(--teal);color:#fff}
+.footer-col h4{font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.4);margin-bottom:1.1rem}
+.footer-col a{display:block;font-size:.88rem;color:rgba(255,255,255,.55);text-decoration:none;margin-bottom:.5rem;transition:color .2s}
+.footer-col a:hover{color:var(--teal-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:rgba(255,255,255,.35)}
+.footer-bottom-links{display:flex;gap:1.5rem}
+.footer-bottom-links a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.footer-bottom-links a:hover{color:rgba(255,255,255,.7)}
+
+/* ── FLOAT CTA ── */
+.float-cta{position:fixed;bottom:1.5rem;right:1.5rem;z-index:900;background:var(--teal);color:var(--white);padding:.9rem 1.5rem;border-radius:50px;font-weight:700;font-size:.88rem;text-decoration:none;box-shadow:0 6px 24px rgba(26,158,143,.5);display:flex;align-items:center;gap:.5rem;transition:all .3s;opacity:0;pointer-events:none}
+.float-cta.show{opacity:1;pointer-events:all}
+.float-cta:hover{background:var(--teal-light);transform:scale(1.04)}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-tag{animation:fadeUp .6s ease both}
+.hero h1{animation:fadeUp .7s .1s ease both}
+.hero-sub{animation:fadeUp .7s .2s ease both}
+.hero-btns{animation:fadeUp .7s .3s ease both}
+.hero-stats{animation:fadeUp .7s .4s ease both}
+.quote-card{animation:fadeUp .8s .25s ease both}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.15s}
+.reveal-delay-2{transition-delay:.3s}
+.reveal-delay-3{transition-delay:.45s}
+
+/* ── CRM ── */
+.crm-page{background:var(--cream);min-height:100vh}
+.crm-lock{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem}
+.crm-lock-card{background:#fff;border-radius:var(--r-lg);padding:3rem;max-width:380px;width:100%;text-align:center;box-shadow:var(--shadow-lg);border:1.5px solid var(--border)}
+.crm-lock-card h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.crm-lock-card p{font-size:.88rem;color:var(--gray);margin-bottom:2rem}
+.crm-lock-card input{width:100%;padding:.85rem 1rem;border:1.5px solid var(--border);border-radius:var(--r);font-size:1rem;text-align:center;letter-spacing:.2em;outline:none;transition:border .2s;font-family:'DM Sans',sans-serif;margin-bottom:1rem}
+.crm-lock-card input:focus{border-color:var(--teal)}
+.crm-app{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+.crm-sidebar{background:var(--navy);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto}
+.crm-sidebar-logo{padding:1.5rem 1.25rem 1rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.crm-sidebar-logo h1{font-size:1.1rem;font-weight:700;color:#fff;line-height:1.2}
+.crm-sidebar-logo p{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.2rem}
+.crm-nav-item{display:flex;align-items:center;gap:.7rem;padding:.65rem 1.25rem;cursor:pointer;font-size:.88rem;color:rgba(255,255,255,.65);border-left:3px solid transparent;transition:all .15s}
+.crm-nav-item:hover{color:#fff;background:rgba(255,255,255,.07)}
+.crm-nav-item.active{color:#fff;background:rgba(26,158,143,.2);border-left-color:var(--teal);font-weight:600}
+.crm-nav-item .icon{font-size:1.05rem;width:20px;text-align:center}
+.crm-sidebar-footer{margin-top:auto;padding:1rem 1.25rem;border-top:1px solid rgba(255,255,255,.1);font-size:.75rem;color:rgba(255,255,255,.35)}
+.crm-main{display:flex;flex-direction:column;overflow:hidden}
+.crm-topbar{background:#fff;border-bottom:1px solid var(--border);padding:.85rem 1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.crm-topbar-title{font-size:1.15rem;font-weight:700;color:var(--navy)}
+.crm-topbar-sub{font-size:.8rem;color:var(--gray);margin-top:.1rem}
+.crm-topbar-actions{display:flex;gap:.6rem}
+.crm-content{flex:1;overflow-y:auto;padding:1.5rem 1.75rem}
+.btn{padding:.55rem 1.1rem;border-radius:var(--r);font-size:.85rem;font-weight:600;cursor:pointer;border:none;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;font-family:'DM Sans',sans-serif}
+.btn-sm{padding:.4rem .8rem;font-size:.78rem}
+.btn-xs{padding:.28rem .6rem;font-size:.72rem}
+.btn-p{background:var(--teal);color:#fff}
+.btn-p:hover{background:var(--teal-light)}
+.btn-o{background:#fff;color:var(--navy);border:1.5px solid var(--border)}
+.btn-o:hover{border-color:var(--teal);color:var(--teal)}
+.btn-d{background:var(--red);color:#fff}
+.btn-d:hover{opacity:.9}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem}
+.stat-card{background:#fff;border-radius:var(--r);padding:1.2rem 1.4rem;border:1.5px solid var(--border)}
+.stat-icon{font-size:1.5rem;margin-bottom:.5rem}
+.stat-num{font-size:1.8rem;font-weight:700;color:var(--navy);line-height:1}
+.stat-lbl{font-size:.78rem;color:var(--gray);margin-top:.25rem}
+.stat-delta{font-size:.75rem;font-weight:600;margin-top:.4rem;color:var(--green)}
+.card{background:#fff;border-radius:var(--r);border:1.5px solid var(--border);overflow:hidden}
+.card-header{padding:1rem 1.4rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.card-title{font-size:.95rem;font-weight:700;color:var(--navy)}
+.card-body{padding:1.2rem 1.4rem}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.83rem}
+th{background:var(--gray-light);padding:.6rem .9rem;text-align:left;font-weight:700;font-size:.75rem;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+td{padding:.65rem .9rem;border-bottom:1px solid var(--border);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#fafafa}
+.badge{display:inline-flex;align-items:center;padding:.2rem .6rem;border-radius:50px;font-size:.72rem;font-weight:700}
+.badge-green{background:var(--green-l);color:var(--green)}
+.badge-yellow{background:var(--yellow-l);color:#92400e}
+.badge-red{background:var(--red-l);color:var(--red)}
+.badge-blue{background:#dbeafe;color:#1e40af}
+.badge-gray{background:var(--gray-light);color:var(--gray)}
+.modal-overlay{position:fixed;inset:0;background:rgba(13,31,45,.55);z-index:2000;display:flex;align-items:center;justify-content:center;padding:1rem}
+.modal{background:#fff;border-radius:14px;width:100%;max-width:600px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(13,31,45,.25)}
+.modal-header{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.modal-title{font-size:1.05rem;font-weight:700}
+.modal-close-btn{background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--gray);padding:.2rem .4rem;border-radius:6px}
+.modal-close-btn:hover{background:var(--gray-light)}
+.modal-body{padding:1.5rem}
+.modal-footer{padding:1rem 1.5rem;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.form-full{grid-column:1/-1}
+.form-grp{display:flex;flex-direction:column;gap:.35rem}
+.form-grp label{font-size:.8rem;font-weight:600;color:var(--navy)}
+.form-grp input,.form-grp select,.form-grp textarea{padding:.6rem .85rem;border:1.5px solid var(--border);border-radius:8px;font-size:.88rem;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;background:#fff;color:var(--navy)}
+.form-grp input:focus,.form-grp select:focus,.form-grp textarea:focus{border-color:var(--teal)}
+.form-grp textarea{resize:vertical;min-height:72px}
+.form-hint{font-size:.72rem;color:var(--gray)}
+.log-wrap{background:var(--gray-light);border-radius:8px;padding:.85rem 1rem;font-size:.8rem;color:var(--navy);max-height:300px;overflow-y:auto;line-height:1.7}
+.log-entry{padding:.2rem 0;border-bottom:1px solid var(--border)}
+.log-entry:last-child{border:none}
+.log-time{color:var(--gray);font-size:.72rem}
+.log-ok{color:var(--green)}
+.log-warn{color:#92400e}
+.log-err{color:var(--red)}
+.crm-tabs{display:flex;gap:.25rem;background:var(--gray-light);padding:.3rem;border-radius:var(--r);margin-bottom:1.5rem}
+.crm-tab{flex:1;padding:.55rem;text-align:center;cursor:pointer;border-radius:8px;font-size:.83rem;font-weight:600;color:var(--gray);transition:all .2s}
+.crm-tab.active{background:#fff;color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.empty-state{text-align:center;padding:3rem 1rem;color:var(--gray)}
+.empty-state .empty-icon{font-size:2.5rem;margin-bottom:.75rem}
+.empty-state h3{font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.spinner{display:inline-block;width:16px;height:16px;border:2.5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+.toast-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;flex-direction:column;gap:.5rem;pointer-events:none}
+.toast{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:.85rem 1.1rem;font-size:.85rem;display:flex;align-items:center;gap:.6rem;box-shadow:var(--shadow);animation:fadeUp .3s ease;max-width:320px}
+.toast.toast-success{border-color:var(--green);background:var(--green-l);color:var(--green)}
+.toast.toast-error{border-color:var(--red);background:var(--red-l);color:var(--red)}
+.toast.toast-info{border-color:var(--teal);background:var(--teal-pale);color:var(--teal)}
+.info-box{border-radius:8px;padding:.85rem 1rem;font-size:.82rem;border-left:3px solid}
+.info-box.yellow{background:var(--yellow-l);border-color:var(--gold)}
+.sms-preview-box{background:var(--teal-pale);border-radius:8px;padding:.75rem;font-size:.8rem;margin-top:.5rem}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-content{grid-template-columns:1fr;gap:2.5rem}
+  .quote-card{max-width:100%}
+  .booking-layout,.faq-layout,.contact-grid{grid-template-columns:1fr;gap:2rem}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .crm-app{grid-template-columns:1fr}
+  .crm-sidebar{display:none}
+  .stats-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero{padding:100px 1.5rem 60px}
+  .hero h1{font-size:2.4rem}
+  .hero-stats{gap:1.5rem}
+  .hero-btns{flex-direction:column}
+  .footer-top{grid-template-columns:1fr;gap:2rem}
+  .trust-bar-inner{gap:1.5rem}
+  .form-row{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .form-grid{grid-template-columns:1fr}
+  .form-full{grid-column:1}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav id="navbar">
+  <a href="#" class="nav-logo" onclick="showPage('home');return false;">
+    <div class="nav-logo-icon">✨</div>
+    <div>
+      <div class="nav-logo-text">Custom Cleaning</div>
+      <div class="nav-logo-sub">RVA</div>
+    </div>
+  </a>
+  <div class="nav-links" id="mainNavLinks">
+    <a href="#services" onclick="showPage('home');setTimeout(()=>document.getElementById('services').scrollIntoView({behavior:'smooth'}),50);return false;">Services</a>
+    <a href="#process" onclick="showPage('home');setTimeout(()=>document.getElementById('process').scrollIntoView({behavior:'smooth'}),50);return false;">How It Works</a>
+    <a href="#testimonials" onclick="showPage('home');setTimeout(()=>document.getElementById('testimonials').scrollIntoView({behavior:'smooth'}),50);return false;">Reviews</a>
+    <a href="#faq" onclick="showPage('home');setTimeout(()=>document.getElementById('faq').scrollIntoView({behavior:'smooth'}),50);return false;">FAQ</a>
+    <a href="#contact" onclick="showPage('home');setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),50);return false;">Contact</a>
+    <a href="#booking" onclick="showPage('home');setTimeout(()=>document.getElementById('booking').scrollIntoView({behavior:'smooth'}),50);return false;" class="nav-cta">Book Now →</a>
+    <a href="#crm" onclick="showPage('crm');return false;" class="nav-admin">⚙ Dashboard</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="toggleMenu();showPage('home');setTimeout(()=>document.getElementById('services').scrollIntoView({behavior:'smooth'}),50)">Services</a>
+  <a href="#process" onclick="toggleMenu();showPage('home');setTimeout(()=>document.getElementById('process').scrollIntoView({behavior:'smooth'}),50)">How It Works</a>
+  <a href="#testimonials" onclick="toggleMenu();showPage('home');setTimeout(()=>document.getElementById('testimonials').scrollIntoView({behavior:'smooth'}),50)">Reviews</a>
+  <a href="#faq" onclick="toggleMenu();showPage('home');setTimeout(()=>document.getElementById('faq').scrollIntoView({behavior:'smooth'}),50)">FAQ</a>
+  <a href="#contact" onclick="toggleMenu();showPage('home');setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),50)">Contact</a>
+  <a href="#booking" onclick="toggleMenu();showPage('home');setTimeout(()=>document.getElementById('booking').scrollIntoView({behavior:'smooth'}),50)" style="background:var(--teal);color:white;font-weight:700;">📅 Book Now</a>
+  <a href="#crm" onclick="toggleMenu();showPage('crm')">⚙ Dashboard</a>
+</div>
+
+<!-- ══════════ PUBLIC PAGE ══════════ -->
+<div id="page-home" class="page active">
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-tag">⭐ Serving Richmond &amp; Surrounding Areas</div>
+      <h1>A <em>Spotless</em> Home,<br>Done Right.</h1>
+      <p class="hero-sub">Richmond's trusted residential cleaning service. Professional, reliable, and tailored to your home. Book online in minutes.</p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn-primary" onclick="setTimeout(()=>document.getElementById('booking').scrollIntoView({behavior:'smooth'}),10);return false;">📅 Book a Cleaning</a>
+        <a href="#services" class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">View Services →</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-num">200+</div><div class="hero-stat-lbl">Happy Clients</div></div>
+        <div><div class="hero-stat-num">5★</div><div class="hero-stat-lbl">Average Rating</div></div>
+        <div><div class="hero-stat-num">100%</div><div class="hero-stat-lbl">Satisfaction Guarantee</div></div>
+      </div>
+    </div>
+    <!-- INSTANT QUOTE CALCULATOR -->
+    <div class="quote-card">
+      <h3>Get an Instant Quote</h3>
+      <p>Takes 30 seconds — no commitment required.</p>
+      <div class="form-group">
+        <label>Service Type</label>
+        <select id="q-service" onchange="calcQuote()">
+          <option value="">Select a service...</option>
+          <option value="standard">Standard Clean</option>
+          <option value="deep">Deep Clean</option>
+          <option value="movein">Move In / Move Out</option>
+          <option value="recurring">Recurring (Weekly/Bi-Weekly)</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Bedrooms</label>
+          <select id="q-beds" onchange="calcQuote()">
+            <option value="1">1 Bedroom</option><option value="2">2 Bedrooms</option>
+            <option value="3" selected>3 Bedrooms</option><option value="4">4 Bedrooms</option><option value="5">5+ Bedrooms</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Bathrooms</label>
+          <select id="q-baths" onchange="calcQuote()">
+            <option value="1">1 Bath</option><option value="2" selected>2 Baths</option>
+            <option value="3">3 Baths</option><option value="4">4+ Baths</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Add-ons</label>
+        <select id="q-addon" onchange="calcQuote()">
+          <option value="0">None</option><option value="40">Inside oven cleaning (+$40)</option>
+          <option value="30">Inside fridge cleaning (+$30)</option><option value="60">Interior windows (+$60)</option>
+          <option value="50">Laundry &amp; folding (+$50)</option>
+        </select>
+      </div>
+      <div id="quoteResult" class="quote-result">
+        <div>Estimated Price</div>
+        <div class="quote-result-price" id="quotePrice">$0</div>
+        <div class="quote-result-note">Final price confirmed after booking. No surprises.</div>
+      </div>
+      <a href="#booking" class="btn-primary btn-full" style="margin-top:.5rem;" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'});return false;">Book This Service →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="trust-icon">🛡️</span> Fully Insured &amp; Bonded</div>
+    <div class="trust-item"><span class="trust-icon">✅</span> Background-Checked Staff</div>
+    <div class="trust-item"><span class="trust-icon">🌿</span> Eco-Friendly Products Available</div>
+    <div class="trust-item"><span class="trust-icon">💯</span> Satisfaction Guarantee</div>
+    <div class="trust-item"><span class="trust-icon">🔒</span> Secure Online Booking</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag">What We Offer</div>
+      <h2 class="section-title">Cleaning Services for Every Need</h2>
+      <p class="section-sub">Whether it's a quick refresh or a full deep clean, we've got you covered. All services include our quality guarantee.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-emoji">🧹</span>
+        <div class="service-title">Standard Clean</div>
+        <p class="service-desc">Perfect for regular upkeep. We tackle every room so your home stays fresh between deep cleans.</p>
+        <div class="service-price">From $95 <span>/ visit</span></div>
+        <ul class="service-includes">
+          <li>All rooms vacuumed &amp; mopped</li><li>Bathrooms scrubbed &amp; sanitized</li>
+          <li>Kitchen surfaces &amp; appliances</li><li>Dusting throughout</li><li>Trash removal</li>
+        </ul>
+      </div>
+      <div class="service-card featured reveal reveal-delay-1">
+        <div class="popular-tag">Most Popular</div>
+        <span class="service-emoji">✨</span>
+        <div class="service-title">Deep Clean</div>
+        <p class="service-desc">A thorough top-to-bottom clean — perfect for first-time clients or seasonal refreshes.</p>
+        <div class="service-price">From $195 <span>/ visit</span></div>
+        <ul class="service-includes">
+          <li>Everything in Standard Clean</li><li>Inside appliances (oven, fridge)</li>
+          <li>Baseboards, vents &amp; fans</li><li>Window sills &amp; tracks</li>
+          <li>Cabinet exteriors &amp; light fixtures</li>
+        </ul>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-emoji">📦</span>
+        <div class="service-title">Move In / Move Out</div>
+        <p class="service-desc">Get your security deposit back or start fresh in your new home. We clean every corner.</p>
+        <div class="service-price">From $220 <span>/ visit</span></div>
+        <ul class="service-includes">
+          <li>Deep clean of entire property</li><li>Inside all appliances</li>
+          <li>Interior windows &amp; blinds</li><li>Closets &amp; cabinets inside</li>
+          <li>Certificate of cleaning available</li>
+        </ul>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <span class="service-emoji">🔄</span>
+        <div class="service-title">Recurring Cleaning</div>
+        <p class="service-desc">Weekly, bi-weekly, or monthly — save up to 20% and enjoy a consistently spotless home.</p>
+        <div class="service-price">From $75 <span>/ visit</span></div>
+        <ul class="service-includes">
+          <li>Flexible scheduling</li><li>Same trusted team each visit</li>
+          <li>Up to 20% recurring discount</li><li>Priority booking &amp; scheduling</li>
+          <li>Free re-clean guarantee</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="process">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag">Simple Process</div>
+      <h2 class="section-title" style="color:white;">How It Works</h2>
+      <p class="section-sub" style="margin:0 auto;">From booking to a spotless home in four simple steps. No hassle, no surprises.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="step-num">1</div>
+        <div class="step-title">Get a Quote</div>
+        <p class="step-desc">Use our instant calculator above or call us. Get a transparent price in 30 seconds.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-num">2</div>
+        <div class="step-title">Book Online</div>
+        <p class="step-desc">Choose your date, time, and service. Confirm in minutes — no phone tag required.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-num">3</div>
+        <div class="step-title">We Show Up</div>
+        <p class="step-desc">Our professional team arrives on time, fully equipped, and ready to work.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-num">4</div>
+        <div class="step-title">Enjoy Your Home</div>
+        <p class="step-desc">Relax in a spotless space. If anything's not right, we'll fix it — guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="container">
+    <div class="booking-layout">
+      <div class="booking-info">
+        <div class="section-tag">Book a Cleaning</div>
+        <h2>Schedule Your<br>Cleaning Today</h2>
+        <p>Fill out the form and we'll confirm your appointment within 24 hours. Questions? Call or text us directly at <strong>(804) 814-5491</strong>.</p>
+        <div class="booking-perks">
+          <div class="perk"><div class="perk-icon">✅</div><div><div class="perk-title">No Commitment Required</div><div class="perk-desc">Cancel or reschedule up to 24 hours before your appointment.</div></div></div>
+          <div class="perk"><div class="perk-icon">💳</div><div><div class="perk-title">Pay After Service</div><div class="perk-desc">We invoice after each clean. No upfront payment needed.</div></div></div>
+          <div class="perk"><div class="perk-icon">🔒</div><div><div class="perk-title">Secure &amp; Private</div><div class="perk-desc">Your information is never shared. 100% confidential.</div></div></div>
+          <div class="perk"><div class="perk-icon">📱</div><div><div class="perk-title">SMS Confirmation</div><div class="perk-desc">You'll receive a text confirmation once your booking is saved.</div></div></div>
+        </div>
+      </div>
+      <div class="booking-form-card reveal">
+        <h3>Request a Booking</h3>
+        <p>We'll confirm within 24 hours. All fields marked * are required.</p>
+        <div id="bookingSuccess" class="form-success">
+          <h4>🎉 Booking Received!</h4>
+          <p>Thank you! We've received your request and will confirm your appointment via text or email within 24 hours.<br><br>Questions? Call us at <strong>(804) 814-5491</strong></p>
+        </div>
+        <div id="bookingFormWrap">
+          <div class="form-row">
+            <div class="form-group"><label>First &amp; Last Name *</label><input type="text" id="b-fname" placeholder="Jane Smith"></div>
+            <div class="form-group"><label>Phone Number *</label><input type="tel" id="b-phone" placeholder="(804) 555-0000"></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" id="b-email" placeholder="you@email.com"></div>
+          <div class="form-group"><label>Service Address *</label><input type="text" id="b-address" placeholder="123 Main St, Richmond VA 23220"></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Service Type *</label>
+              <select id="b-service">
+                <option value="">Choose service...</option>
+                <option>Standard Clean</option><option>Deep Clean</option>
+                <option>Move In / Move Out</option><option>Recurring Weekly</option>
+                <option>Recurring Bi-Weekly</option><option>Recurring Monthly</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preferred Date *</label>
+              <input type="date" id="b-date">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Preferred Time</label>
+              <select id="b-time">
+                <option>8:00 AM</option><option>9:00 AM</option><option>10:00 AM</option>
+                <option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option>
+                <option>2:00 PM</option><option>3:00 PM</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Add-On Service</label>
+              <select id="b-addon">
+                <option>None</option><option>Inside Oven (+$40)</option>
+                <option>Inside Fridge (+$30)</option><option>Interior Windows (+$60)</option>
+                <option>Laundry &amp; Folding (+$50)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Special Instructions / Notes</label><textarea id="b-notes" rows="3" placeholder="Pets, entry code, allergies, areas to focus..."></textarea></div>
+          <div class="form-group" style="flex-direction:row;align-items:center;display:flex;gap:.6rem;margin-top:.25rem">
+            <input type="checkbox" id="b-newsletter" checked style="width:auto;margin:0;">
+            <label for="b-newsletter" style="font-size:.82rem;font-weight:400;cursor:pointer;">Add me to the newsletter for exclusive deals &amp; tips</label>
+          </div>
+          <button class="btn-primary btn-full" onclick="submitBooking()" style="margin-top:1.25rem;font-size:1rem;">📅 Request Booking →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag">What Clients Say</div>
+      <h2 class="section-title">5-Star Reviews from Richmond Homeowners</h2>
+      <p class="section-sub">Real reviews from real clients. See why Richmond trusts Custom Cleaning RVA.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Absolutely incredible service. My house hasn't looked this clean since we moved in. The team was prompt, professional, and thorough — every single corner."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">SL</div><div><div class="testimonial-name">Sarah L.</div><div class="testimonial-location">The Fan, Richmond VA · Recurring Client</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Used them for a move-out clean and got my full deposit back! Worth every penny. They cleaned things I didn't even know needed cleaning. Highly recommend."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">MK</div><div><div class="testimonial-name">Marcus K.</div><div class="testimonial-location">Scott's Addition, Richmond VA · Move-Out</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I've tried several cleaning services in RVA and this is by far the best. Reliable, communicative, and the results speak for themselves. My go-to from now on."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">JT</div><div><div class="testimonial-name">Jennifer T.</div><div class="testimonial-location">Midlothian, VA · Bi-Weekly Client</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Booked online, confirmed within hours, showed up exactly on time. The whole process was seamless. My kitchen and bathrooms look brand new."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">DR</div><div><div class="testimonial-name">David R.</div><div class="testimonial-location">Short Pump, VA · Deep Clean</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I have two dogs and was worried, but they handled everything beautifully — including pet hair I thought was permanent. Outstanding work and super friendly team."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">AP</div><div><div class="testimonial-name">Amanda P.</div><div class="testimonial-location">Henrico, VA · Monthly Clean</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-3">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Michael and his team are true professionals. Fair pricing, excellent communication, and the cleanest my house has ever been. Will absolutely be booking again."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">RC</div><div><div class="testimonial-name">Robert C.</div><div class="testimonial-location">Chesterfield, VA · Standard Clean</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-sidebar reveal">
+        <div class="section-tag">Common Questions</div>
+        <h2>Got Questions?<br>We Have Answers.</h2>
+        <p>Everything you need to know about our service, pricing, and policies. Still have questions? We're always a call away.</p>
+        <div class="faq-contact-block">
+          <p>Can't find your answer? Reach out directly.</p>
+          <a href="tel:8048145491" class="faq-contact-link">📞 (804) 814-5491</a>
+          <a href="/cdn-cgi/l/email-protection#adced8ded9c2c0cec1c8ccc3c4c3cadfdbccedcac0ccc4c183cec2c0" class="faq-contact-link">✉️ <span class="__cf_email__" data-cfemail="fe9d8b8d8a91939d929b9f909790998c889fbe99939f9792d09d9193">[email&#160;protected]</span></a>
+        </div>
+      </div>
+      <div class="faq-list reveal reveal-delay-1">
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Do I need to be home during the cleaning?<div class="faq-icon">+</div></div><div class="faq-answer">No, you don't need to be home. Many clients provide a key, garage code, or lockbox access. Your home is in safe hands — all staff are background-checked and insured.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">What's included in a Standard Clean?<div class="faq-icon">+</div></div><div class="faq-answer">All rooms vacuumed and mopped, bathrooms scrubbed and sanitized, kitchen surfaces and appliance exteriors cleaned, dusting throughout, and trash removal. A thorough, consistent clean every visit.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">How do you handle pets?<div class="faq-icon">+</div></div><div class="faq-answer">We love pets! Just let us know about any animals in your home when booking. We'll take extra care around them and note any allergies. Pet hair removal is included in all services.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">What products do you use?<div class="faq-icon">+</div></div><div class="faq-answer">We use professional-grade, effective cleaning products. Eco-friendly and green product options are available upon request at no additional charge. Just mention it when booking.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Do you bring your own supplies?<div class="faq-icon">+</div></div><div class="faq-answer">Yes! We bring everything needed — cleaning products, vacuums, mops, and supplies. If you have a preferred product for a specific surface or allergy concern, we're happy to use yours.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">What's your cancellation policy?<div class="faq-icon">+</div></div><div class="faq-answer">Cancel or reschedule anytime up to 24 hours before your appointment at no charge. Late cancellations (under 24 hours) may incur a small fee. We always work with you to find a better time.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Are you insured and bonded?<div class="faq-icon">+</div></div><div class="faq-answer">Absolutely. We are fully insured and bonded for your complete peace of mind. In the unlikely event of any damage, you're fully protected. We take responsibility seriously.</div></div>
+        <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Do you offer a satisfaction guarantee?<div class="faq-icon">+</div></div><div class="faq-answer">Yes — 100%. If something was missed or doesn't meet your expectations, contact us within 24 hours and we'll return to fix it at no charge. Your satisfaction is our standard.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section id="areas">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Where We Serve</div>
+      <h2 class="section-title">Serving Greater Richmond, VA</h2>
+      <p class="section-sub">We proudly serve Richmond and all surrounding communities. Don't see your area? Call us — we likely cover it.</p>
+    </div>
+    <div class="areas-grid">
+      <span class="area-tag">Richmond (RVA)</span><span class="area-tag">The Fan District</span><span class="area-tag">Scott's Addition</span>
+      <span class="area-tag">Carytown</span><span class="area-tag">Short Pump</span><span class="area-tag">Midlothian</span>
+      <span class="area-tag">Henrico</span><span class="area-tag">Chesterfield</span><span class="area-tag">Glen Allen</span>
+      <span class="area-tag">Mechanicsville</span><span class="area-tag">Colonial Heights</span><span class="area-tag">Chester</span>
+      <span class="area-tag">Ashland</span><span class="area-tag">Bon Air</span><span class="area-tag">Lakeside</span>
+      <span class="area-tag">Church Hill</span><span class="area-tag">Manchester</span><span class="area-tag">Northside RVA</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-tag">Get In Touch</div>
+        <h2>We'd Love to<br>Hear From You</h2>
+        <p>Have a question, want a custom quote, or just need to talk through your options? We're here and happy to help — reach out any time.</p>
+        <div class="contact-methods">
+          <div class="contact-method"><div class="contact-method-icon">📞</div><div><div class="contact-method-label">Phone / Text</div><div class="contact-method-value">(804) 814-5491</div></div></div>
+          <div class="contact-method"><div class="contact-method-icon">✉️</div><div><div class="contact-method-label">Email</div><div class="contact-method-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="294a5c5a5d46444a454c484740474e5b5f48694e44484045074a4644">[email&#160;protected]</a></div></div></div>
+          <div class="contact-method"><div class="contact-method-icon">🕐</div><div><div class="contact-method-label">Business Hours</div><div class="contact-method-value">Mon–Sat, 8:00 AM – 6:00 PM</div></div></div>
+          <div class="contact-method"><div class="contact-method-icon">📍</div><div><div class="contact-method-label">Based In</div><div class="contact-method-value">Richmond, Virginia</div></div></div>
+        </div>
+      </div>
+      <div class="contact-form-card reveal reveal-delay-1">
+        <h3>Send Us a Message</h3>
+        <div id="contactSuccess" style="display:none;background:var(--teal-pale);border:1.5px solid var(--teal);border-radius:var(--r);padding:1.2rem;text-align:center;margin-bottom:1rem;">
+          <strong style="color:var(--teal);">✅ Message sent!</strong><br><span style="font-size:.85rem;color:var(--gray);">We'll be in touch within 24 hours.</span>
+        </div>
+        <div id="contactFormWrap">
+          <div class="form-row">
+            <div class="form-group"><label>Name *</label><input type="text" id="c-name" placeholder="Your name"></div>
+            <div class="form-group"><label>Phone</label><input type="tel" id="c-phone" placeholder="(804) 555-0000"></div>
+          </div>
+          <div class="form-group"><label>Email *</label><input type="email" id="c-email" placeholder="you@email.com"></div>
+          <div class="form-group"><label>Message *</label><textarea id="c-message" rows="4" placeholder="How can we help you?"></textarea></div>
+          <button class="btn-primary btn-full" onclick="submitContact()">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" onclick="showPage('home');window.scrollTo(0,0);return false;" style="margin-bottom:.5rem;">
+          <div class="nav-logo-icon">✨</div>
+          <div><div class="nav-logo-text" style="color:white;">Custom Cleaning</div><div class="nav-logo-sub">RVA</div></div>
+        </a>
+        <p>Richmond's trusted residential cleaning service. Reliable, professional, and always thorough — guaranteed.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" title="Facebook">f</a>
+          <a href="#" class="social-btn" title="Instagram">📷</a>
+          <a href="#" class="social-btn" title="Google">G</a>
+          <a href="#" class="social-btn" title="Nextdoor">N</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">Standard Clean</a>
+        <a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">Deep Clean</a>
+        <a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">Move In / Move Out</a>
+        <a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">Recurring Cleaning</a>
+        <a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});return false;">Add-On Services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#process" onclick="document.getElementById('process').scrollIntoView({behavior:'smooth'});return false;">How It Works</a>
+        <a href="#testimonials" onclick="document.getElementById('testimonials').scrollIntoView({behavior:'smooth'});return false;">Reviews</a>
+        <a href="#faq" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'});return false;">FAQ</a>
+        <a href="#areas" onclick="document.getElementById('areas').scrollIntoView({behavior:'smooth'});return false;">Service Areas</a>
+        <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:8048145491">📞 (804) 814-5491</a>
+        <a href="/cdn-cgi/l/email-protection#99faeceaedf6f4faf5fcf8f7f0f7feebeff8d9fef4f8f0f5b7faf6f4">✉️ Email Us</a>
+        <a href="#booking" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'});return false;">📅 Book Online</a>
+        <a href="#">📍 Richmond, VA</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Custom Cleaning RVA · All rights reserved · Built with ✨</div>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /page-home -->
+
+<!-- ══════════ CRM PAGE ══════════ -->
+<div id="page-crm" class="page crm-page">
+  <!-- LOCK SCREEN -->
+  <div id="crmLock" class="crm-lock">
+    <div class="crm-lock-card">
+      <div style="font-size:2.5rem;margin-bottom:1rem;">🔒</div>
+      <h2>Business Dashboard</h2>
+      <p>Enter your passcode to access the CRM.</p>
+      <input type="password" id="crmPassInput" placeholder="••••••" maxlength="20" onkeydown="if(event.key==='Enter')unlockCRM()">
+      <button class="btn-primary btn-full" onclick="unlockCRM()">Unlock Dashboard →</button>
+      <div id="crmLockError" style="color:var(--red);font-size:.8rem;margin-top:.75rem;display:none;">Incorrect passcode. Try again.</div>
+      <div style="margin-top:1.5rem;font-size:.75rem;color:var(--gray);">Default passcode: <strong>1234</strong></div>
+    </div>
+  </div>
+
+  <!-- CRM APP (shown after unlock) -->
+  <div id="crmApp" class="crm-app" style="display:none;">
+    <!-- SIDEBAR -->
+    <aside class="crm-sidebar">
+      <div class="crm-sidebar-logo">
+        <div style="font-size:1.5rem;margin-bottom:.4rem;">✨</div>
+        <h1>Custom Cleaning RVA</h1>
+        <p>Business Dashboard</p>
+      </div>
+      <div id="crmNav" style="padding:.75rem 0;flex:1"></div>
+      <div class="crm-sidebar-footer" id="crmSidebarFooter">Loading...</div>
+    </aside>
+    <!-- MAIN -->
+    <main class="crm-main">
+      <div id="crmPageContent"></div>
+    </main>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast-wrap" id="crmToasts"></div>
+</div><!-- /page-crm -->
+
+<!-- FLOATING CTA -->
+<a href="#booking" id="floatCta" class="float-cta" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'});return false;">📅 Book Now</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ══════════════════════════════════════
+//  PAGE / NAV SWITCHING
+// ══════════════════════════════════════
+function showPage(p) {
+  document.querySelectorAll('.page').forEach(el => el.classList.remove('active'));
+  document.getElementById('page-' + p).classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// ══════════════════════════════════════
+//  NAVBAR SCROLL
+// ══════════════════════════════════════
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+  const fc = document.getElementById('floatCta');
+  if (fc) fc.classList.toggle('show', window.scrollY > 400 && document.getElementById('page-home').classList.contains('active'));
+});
+
+// ══════════════════════════════════════
+//  MOBILE MENU
+// ══════════════════════════════════════
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ══════════════════════════════════════
+//  QUOTE CALCULATOR
+// ══════════════════════════════════════
+const prices = {
+  standard: {base:80, bed:20, bath:15},
+  deep:     {base:140, bed:28, bath:22},
+  movein:   {base:160, bed:30, bath:25},
+  recurring:{base:68, bed:17, bath:13}
+};
+function calcQuote() {
+  const service = document.getElementById('q-service').value;
+  const beds = parseInt(document.getElementById('q-beds').value) || 3;
+  const baths = parseInt(document.getElementById('q-baths').value) || 2;
+  const addon = parseInt(document.getElementById('q-addon').value) || 0;
+  const result = document.getElementById('quoteResult');
+  if (!service) { result.classList.remove('show'); return; }
+  const p = prices[service];
+  const total = p.base + (beds * p.bed) + (baths * p.bath) + addon;
+  const low = Math.round(total * 0.95 / 5) * 5;
+  const high = Math.round(total * 1.1 / 5) * 5;
+  document.getElementById('quotePrice').textContent = `$${low} – $${high}`;
+  result.classList.add('show');
+}
+
+// ══════════════════════════════════════
+//  FAQ ACCORDION
+// ══════════════════════════════════════
+function toggleFaq(el) {
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-answer').classList.remove('open');
+  });
+  if (!isOpen) {
+    el.classList.add('open');
+    el.querySelector('.faq-answer').classList.add('open');
+  }
+}
+
+// ══════════════════════════════════════
+//  REVEAL ON SCROLL
+// ══════════════════════════════════════
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ══════════════════════════════════════
+//  SET MIN DATE
+// ══════════════════════════════════════
+const dateInput = document.getElementById('b-date');
+if (dateInput) {
+  const t = new Date(); t.setDate(t.getDate() + 1);
+  dateInput.min = t.toISOString().split('T')[0];
+  dateInput.value = t.toISOString().split('T')[0];
+}
+
+// ══════════════════════════════════════
+//  BOOKING FORM → SAVES TO CRM
+// ══════════════════════════════════════
+async function submitBooking() {
+  const fname   = document.getElementById('b-fname').value.trim();
+  const phone   = document.getElementById('b-phone').value.trim();
+  const address = document.getElementById('b-address').value.trim();
+  const service = document.getElementById('b-service').value;
+  const date    = document.getElementById('b-date').value;
+  if (!fname || !phone || !address || !service || !date) {
+    alert('Please fill in all required fields (marked with *).'); return;
+  }
+  const email      = document.getElementById('b-email').value.trim();
+  const timeSlot   = document.getElementById('b-time').value;
+  const addOn      = document.getElementById('b-addon').value;
+  const notes      = document.getElementById('b-notes').value.trim();
+  const newsletter = document.getElementById('b-newsletter').checked;
+
+  const booking = {
+    id:         'CCR-' + Date.now(),
+    name:       fname,
+    phone,
+    email,
+    address,
+    service,
+    preferredDate: date,
+    timeSlot,
+    addOns:     addOn,
+    notes,
+    newsletter,
+    status:     'Pending',
+    price:      '',
+    dateBooked: new Date().toLocaleDateString()
+  };
+
+  // Persist into CRM storage
+  try {
+    const existing = await storageGet('bookings') || [];
+    existing.unshift(booking);
+    await storageSet('bookings', existing);
+
+    // Upsert client
+    const clients = await storageGet('clients') || [];
+    if (!clients.find(c => c.phone === phone)) {
+      clients.unshift({ id:'CL-'+Date.now(), name:fname, phone, email, address, since:booking.dateBooked, service, visits:1, newsletter });
+      await storageSet('clients', clients);
+    }
+
+    // Newsletter opt-in
+    if (newsletter && email) {
+      const subs = await storageGet('subscribers') || [];
+      if (!subs.find(s => s.email === email)) {
+        subs.unshift({ email, name: fname.split(' ')[0], dateAdded: booking.dateBooked, source: 'Website Booking' });
+        await storageSet('subscribers', subs);
+      }
+    }
+
+    // Log
+    const logs = await storageGet('logs') || [];
+    logs.unshift({ time: new Date().toLocaleTimeString(), msg: `🌐 Website booking: ${fname} — ${service} on ${date}`, level: 'ok' });
+    await storageSet('logs', logs.slice(0, 100));
+  } catch(e) { /* storage may not be available on all hosts */ }
+
+  document.getElementById('bookingFormWrap').style.display = 'none';
+  document.getElementById('bookingSuccess').classList.add('show');
+  window.scrollTo({ top: document.getElementById('booking').offsetTop - 80, behavior: 'smooth' });
+}
+
+// ══════════════════════════════════════
+//  CONTACT FORM
+// ══════════════════════════════════════
+function submitContact() {
+  const name = document.getElementById('c-name').value.trim();
+  const email = document.getElementById('c-email').value.trim();
+  const message = document.getElementById('c-message').value.trim();
+  if (!name || !email || !message) { alert('Please fill in all required fields.'); return; }
+  document.getElementById('contactFormWrap').style.display = 'none';
+  document.getElementById('contactSuccess').style.display = 'block';
+}
+
+// ══════════════════════════════════════
+//  STORAGE HELPERS
+// ══════════════════════════════════════
+async function storageGet(k) {
+  try {
+    if (window.storage) {
+      const r = await window.storage.get(k);
+      return r ? JSON.parse(r.value) : null;
+    }
+    const v = localStorage.getItem('ccr_' + k);
+    return v ? JSON.parse(v) : null;
+  } catch { return null; }
+}
+async function storageSet(k, v) {
+  try {
+    if (window.storage) {
+      await window.storage.set(k, JSON.stringify(v));
+    } else {
+      localStorage.setItem('ccr_' + k, JSON.stringify(v));
+    }
+  } catch {}
+}
+
+// ══════════════════════════════════════
+//  ANTHROPIC API CALL
+// ══════════════════════════════════════
+async function callClaude(messages, mcpServers = [], systemPrompt = "You are a helpful assistant.") {
+  const body = {
+    model: "claude-sonnet-4-20250514",
+    max_tokens: 1000,
+    system: systemPrompt,
+    messages
+  };
+  if (mcpServers.length) body.mcp_servers = mcpServers;
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  const data = await res.json();
+  if (data.error) throw new Error(data.error.message);
+  return data;
+}
+
+const SMS_GATEWAYS = {
+  att:    '%s@txt.att.net', verizon: '%s@vtext.com',
+  tmobile:'%s@tmomail.net', sprint:  '%s@messaging.sprintpcs.com', boost: '%s@sms.myboostmobile.com'
+};
+function smsEmail(phone, carrier) {
+  const digits = phone.replace(/\D/g, '');
+  return (SMS_GATEWAYS[carrier] || SMS_GATEWAYS.att).replace('%s', digits);
+}
+
+// ══════════════════════════════════════
+//  CRM LOCK
+// ══════════════════════════════════════
+const CRM_PASS = '1234';
+function unlockCRM() {
+  const val = document.getElementById('crmPassInput').value;
+  if (val === CRM_PASS) {
+    document.getElementById('crmLock').style.display = 'none';
+    document.getElementById('crmApp').style.display = 'grid';
+    initCRM();
+  } else {
+    document.getElementById('crmLockError').style.display = 'block';
+    document.getElementById('crmPassInput').value = '';
+  }
+}
+
+// ══════════════════════════════════════
+//  CRM STATE
+// ══════════════════════════════════════
+let CRM = {
+  page: 'dashboard',
+  bookings: [], clients: [], subscribers: [], logs: [],
+  loaded: false
+};
+
+async function loadCRMData() {
+  CRM.bookings    = await storageGet('bookings')    || [];
+  CRM.clients     = await storageGet('clients')     || [];
+  CRM.subscribers = await storageGet('subscribers') || [];
+  CRM.logs        = await storageGet('logs')        || [];
+  CRM.loaded = true;
+}
+
+async function initCRM() {
+  await loadCRMData();
+  renderCRMNav();
+  renderCRMPage();
+}
+
+function renderCRMNav() {
+  const nav = [
+    {id:'dashboard', icon:'📊', label:'Dashboard'},
+    {id:'bookings',  icon:'📅', label:'Bookings'},
+    {id:'clients',   icon:'👥', label:'Clients'},
+    {id:'newsletter',icon:'💌', label:'Newsletter'},
+    {id:'calendar',  icon:'🗓️', label:'Calendar Sync'},
+    {id:'sms',       icon:'📱', label:'Send SMS'},
+    {id:'logs',      icon:'📋', label:'Activity Logs'},
+  ];
+  document.getElementById('crmNav').innerHTML = nav.map(n => `
+    <div class="crm-nav-item ${CRM.page === n.id ? 'active' : ''}" onclick="navigateCRM('${n.id}')">
+      <span class="icon">${n.icon}</span>${n.label}
+    </div>
+  `).join('');
+  document.getElementById('crmSidebarFooter').innerHTML =
+    `${CRM.bookings.length} bookings · ${CRM.clients.length} clients<br>${CRM.subscribers.length} newsletter subscribers`;
+}
+
+function navigateCRM(p) {
+  CRM.page = p;
+  renderCRMNav();
+  renderCRMPage();
+}
+
+function addLog(msg, level = 'ok') {
+  const entry = { time: new Date().toLocaleTimeString(), msg, level };
+  CRM.logs.unshift(entry);
+  CRM.logs = CRM.logs.slice(0, 100);
+  storageSet('logs', CRM.logs);
+  renderCRMNav();
+}
+
+function crmToast(msg, type = 'success') {
+  const wrap = document.getElementById('crmToasts');
+  const id = 'toast-' + Date.now();
+  const div = document.createElement('div');
+  div.className = `toast toast-${type}`;
+  div.id = id;
+  const icon = type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️';
+  div.innerHTML = `<span>${icon}</span><span>${msg}</span>`;
+  wrap.appendChild(div);
+  setTimeout(() => { const el = document.getElementById(id); if (el) el.remove(); }, 4500);
+}
+
+function renderCRMPage() {
+  const el = document.getElementById('crmPageContent');
+  switch (CRM.page) {
+    case 'dashboard':  el.innerHTML = renderDashboard();  break;
+    case 'bookings':   el.innerHTML = renderBookings();   break;
+    case 'clients':    el.innerHTML = renderClients();    break;
+    case 'newsletter': el.innerHTML = renderNewsletter(); break;
+    case 'calendar':   el.innerHTML = renderCalendar();   break;
+    case 'sms':        el.innerHTML = renderSMS();        break;
+    case 'logs':       el.innerHTML = renderLogs();       break;
+  }
+  bindCRMEvents();
+}
+
+// ══════════════════════════════════════
+//  DASHBOARD
+// ══════════════════════════════════════
+function renderDashboard() {
+  const confirmed = CRM.bookings.filter(b => b.status === 'Confirmed').length;
+  const revenue   = CRM.bookings.filter(b => b.status === 'Completed').reduce((s,b) => s + (parseFloat(b.price) || 0), 0);
+  const upcoming  = CRM.bookings.filter(b => b.status === 'Confirmed' || b.status === 'Pending' || b.status === 'pending').slice(0,6);
+  return `
+  <div class="crm-topbar">
+    <div><div class="crm-topbar-title">📊 Dashboard</div><div class="crm-topbar-sub">Welcome back — here's your business at a glance.</div></div>
+    <div class="crm-topbar-actions"><button class="btn btn-p" onclick="navigateCRM('bookings')">+ New Booking</button></div>
+  </div>
+  <div class="crm-content">
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-icon">📅</div><div class="stat-num">${CRM.bookings.length}</div><div class="stat-lbl">Total Bookings</div><div class="stat-delta">All time</div></div>
+      <div class="stat-card"><div class="stat-icon">✅</div><div class="stat-num">${confirmed}</div><div class="stat-lbl">Confirmed</div><div class="stat-delta">Active appointments</div></div>
+      <div class="stat-card"><div class="stat-icon">👥</div><div class="stat-num">${CRM.clients.length}</div><div class="stat-lbl">Total Clients</div><div class="stat-delta">In CRM</div></div>
+      <div class="stat-card"><div class="stat-icon">💌</div><div class="stat-num">${CRM.subscribers.length}</div><div class="stat-lbl">Newsletter Subs</div><div class="stat-delta">Growing list</div></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-title">📅 Upcoming & Pending Bookings</div><button class="btn btn-o btn-sm" onclick="navigateCRM('bookings')">View All</button></div>
+      <div class="table-wrap">
+        ${upcoming.length === 0 ? `<div class="empty-state"><div class="empty-icon">📅</div><h3>No upcoming bookings</h3><p>Add your first booking to get started.</p></div>` : `
+        <table>
+          <thead><tr><th>Client</th><th>Service</th><th>Date</th><th>Time</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>${upcoming.map(b => `
+            <tr>
+              <td><strong>${b.name}</strong><br><span style="font-size:.75rem;color:var(--gray)">${b.phone}</span></td>
+              <td>${b.service}</td><td>${b.preferredDate}</td><td>${b.timeSlot || '—'}</td>
+              <td>${statusBadge(b.status)}</td>
+              <td style="white-space:nowrap">
+                <button class="btn btn-o btn-xs" onclick="quickStatus('${b.id}','Confirmed')">✅ Confirm</button>
+                <button class="btn btn-o btn-xs" onclick="quickStatus('${b.id}','Completed')" style="margin-left:3px">🏁 Done</button>
+              </td>
+            </tr>`).join('')}
+          </tbody>
+        </table>`}
+      </div>
+    </div>
+  </div>`;
+}
+
+async function quickStatus(id, status) {
+  const b = CRM.bookings.find(x => x.id === id);
+  if (!b) return;
+  b.status = status;
+  await storageSet('bookings', CRM.bookings);
+  addLog(`Status updated: ${b.name} → ${status}`, 'ok');
+  crmToast(`${b.name} marked as ${status}!`);
+  renderCRMPage();
+}
+
+// ══════════════════════════════════════
+//  BOOKINGS
+// ══════════════════════════════════════
+function renderBookings() {
+  const tab = window._bTab || 'all';
+  const filtered = tab === 'all' ? CRM.bookings : CRM.bookings.filter(b => (b.status||'').toLowerCase() === tab);
+  return `
+  <div class="crm-topbar">
+    <div><div class="crm-topbar-title">📅 Bookings</div><div class="crm-topbar-sub">${CRM.bookings.length} total bookings</div></div>
+    <div class="crm-topbar-actions"><button class="btn btn-p" onclick="openBookingModal()">+ New Booking</button></div>
+  </div>
+  <div class="crm-content">
+    <div class="crm-tabs">
+      ${['all','confirmed','pending','completed','cancelled'].map(t => `
+        <div class="crm-tab ${tab===t?'active':''}" onclick="window._bTab='${t}';renderCRMPage()">${t.charAt(0).toUpperCase()+t.slice(1)}</div>
+      `).join('')}
+    </div>
+    <div class="card">
+      <div class="table-wrap">
+        ${filtered.length === 0 ? `<div class="empty-state"><div class="empty-icon">📅</div><h3>No bookings here</h3><p>Click "+ New Booking" to add one.</p></div>` : `
+        <table>
+          <thead><tr><th>ID</th><th>Client</th><th>Service</th><th>Date</th><th>Time</th><th>Address</th><th>Price</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>${filtered.map(b => `
+            <tr>
+              <td><span style="font-family:monospace;font-size:.72rem;color:var(--teal);font-weight:700">${b.id}</span></td>
+              <td><strong>${b.name}</strong><br><span style="font-size:.75rem;color:var(--gray)">${b.phone}</span></td>
+              <td style="max-width:130px">${b.service}</td>
+              <td>${b.preferredDate}</td><td>${b.timeSlot||'—'}</td>
+              <td style="font-size:.78rem;max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${b.address}</td>
+              <td><strong>${b.price ? '$'+b.price : '—'}</strong></td>
+              <td>${statusBadge(b.status)}</td>
+              <td style="white-space:nowrap">
+                <button class="btn btn-o btn-xs" onclick="editBookingStatus('${b.id}')" title="Change status">✏️</button>
+                <button class="btn btn-o btn-xs" onclick="deleteBooking('${b.id}')" title="Delete" style="margin-left:3px">🗑️</button>
+              </td>
+            </tr>`).join('')}
+          </tbody>
+        </table>`}
+      </div>
+    </div>
+  </div>
+  <div id="bookingModal" style="display:none"></div>`;
+}
+
+function openBookingModal(editId) {
+  const existing = editId ? CRM.bookings.find(b => b.id === editId) : null;
+  const f = existing || { name:'',phone:'',email:'',address:'',service:'Standard Clean',preferredDate:'',timeSlot:'9:00 AM',beds:'3',baths:'2',addOns:'None',price:'',notes:'',newsletter:true,status:'Confirmed' };
+  const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate()+1);
+  const minD = tomorrow.toISOString().split('T')[0];
+  document.getElementById('bookingModal').style.display = 'block';
+  document.getElementById('bookingModal').innerHTML = `
+  <div class="modal-overlay" onclick="if(event.target===this)closeBookingModal()">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">📅 ${editId ? 'Edit Booking' : 'New Booking'}</div>
+        <button class="modal-close-btn" onclick="closeBookingModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-grp"><label>Client Name *</label><input id="m-name" value="${f.name}" placeholder="Jane Smith"></div>
+          <div class="form-grp"><label>Phone *</label><input id="m-phone" value="${f.phone}" placeholder="(804) 555-0000"></div>
+          <div class="form-grp"><label>Email</label><input id="m-email" value="${f.email||''}" placeholder="jane@email.com"></div>
+          <div class="form-grp"><label>Service Type</label>
+            <select id="m-service">
+              ${['Standard Clean','Deep Clean','Move In / Move Out','Recurring Weekly','Recurring Bi-Weekly','Recurring Monthly'].map(s=>`<option ${f.service===s?'selected':''}>${s}</option>`).join('')}
+            </select>
+          </div>
+          <div class="form-grp form-full"><label>Service Address *</label><input id="m-address" value="${f.address}" placeholder="123 Main St, Richmond VA 23220"></div>
+          <div class="form-grp"><label>Preferred Date *</label><input type="date" id="m-date" value="${f.preferredDate||minD}" min="${minD}"></div>
+          <div class="form-grp"><label>Time Slot</label>
+            <select id="m-time">
+              ${['8:00 AM','9:00 AM','10:00 AM','11:00 AM','12:00 PM','1:00 PM','2:00 PM','3:00 PM'].map(t=>`<option ${f.timeSlot===t?'selected':''}>${t}</option>`).join('')}
+            </select>
+          </div>
+          <div class="form-grp"><label>Bedrooms</label>
+            <select id="m-beds">${[1,2,3,4,5].map(n=>`<option ${f.beds==n?'selected':''}>${n}</option>`).join('')}</select>
+          </div>
+          <div class="form-grp"><label>Bathrooms</label>
+            <select id="m-baths">${[1,2,3,4].map(n=>`<option ${f.baths==n?'selected':''}>${n}</option>`).join('')}</select>
+          </div>
+          <div class="form-grp"><label>Add-Ons</label>
+            <select id="m-addon">
+              ${['None','Inside Oven (+$40)','Inside Fridge (+$30)','Interior Windows (+$60)','Laundry & Folding (+$50)'].map(a=>`<option ${f.addOns===a?'selected':''}>${a}</option>`).join('')}
+            </select>
+          </div>
+          <div class="form-grp"><label>Est. Price ($)</label><input id="m-price" value="${f.price||''}" placeholder="0.00"></div>
+          <div class="form-grp"><label>Status</label>
+            <select id="m-status">${['Confirmed','Pending','Completed','Cancelled'].map(s=>`<option ${f.status===s?'selected':''}>${s}</option>`).join('')}</select>
+          </div>
+          <div class="form-grp form-full"><label>Notes / Special Requests</label><textarea id="m-notes" rows="3" placeholder="Pets, entry code, allergies...">${f.notes||''}</textarea></div>
+          <div class="form-grp form-full" style="flex-direction:row;align-items:center;gap:.6rem;display:flex">
+            <input type="checkbox" id="m-nl" ${f.newsletter?'checked':''} style="width:auto">
+            <label for="m-nl" style="cursor:pointer;font-weight:400">Add to newsletter subscriber list</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-o" onclick="closeBookingModal()">Cancel</button>
+        <button class="btn btn-p" onclick="saveBookingModal('${editId||''}')">💾 Save Booking</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function closeBookingModal() {
+  const m = document.getElementById('bookingModal');
+  if (m) m.style.display = 'none';
+}
+
+async function saveBookingModal(editId) {
+  const name    = document.getElementById('m-name').value.trim();
+  const phone   = document.getElementById('m-phone').value.trim();
+  const address = document.getElementById('m-address').value.trim();
+  const date    = document.getElementById('m-date').value;
+  if (!name || !phone || !address || !date) { alert('Please fill in Name, Phone, Address, and Date.'); return; }
+  const email     = document.getElementById('m-email').value.trim();
+  const service   = document.getElementById('m-service').value;
+  const timeSlot  = document.getElementById('m-time').value;
+  const beds      = document.getElementById('m-beds').value;
+  const baths     = document.getElementById('m-baths').value;
+  const addOns    = document.getElementById('m-addon').value;
+  const price     = document.getElementById('m-price').value;
+  const status    = document.getElementById('m-status').value;
+  const notes     = document.getElementById('m-notes').value.trim();
+  const newsletter= document.getElementById('m-nl').checked;
+
+  if (editId) {
+    const idx = CRM.bookings.findIndex(b => b.id === editId);
+    if (idx > -1) Object.assign(CRM.bookings[idx], {name,phone,email,address,service,preferredDate:date,timeSlot,beds,baths,addOns,price,status,notes,newsletter});
+  } else {
+    const booking = { id:'CCR-'+Date.now(), name, phone, email, address, service, preferredDate:date, timeSlot, beds, baths, addOns, price, status, notes, newsletter, dateBooked: new Date().toLocaleDateString() };
+    CRM.bookings.unshift(booking);
+    // Upsert client
+    if (!CRM.clients.find(c => c.phone === phone)) {
+      CRM.clients.unshift({ id:'CL-'+Date.now(), name, phone, email, address, since:booking.dateBooked, service, visits:1, newsletter });
+      await storageSet('clients', CRM.clients);
+    }
+    // Newsletter
+    if (newsletter && email && !CRM.subscribers.find(s => s.email === email)) {
+      CRM.subscribers.unshift({ email, name: name.split(' ')[0], dateAdded: booking.dateBooked, source: 'CRM Booking' });
+      await storageSet('subscribers', CRM.subscribers);
+    }
+  }
+  await storageSet('bookings', CRM.bookings);
+  addLog(`${editId ? 'Booking updated' : 'New booking added'}: ${name} — ${service}`, 'ok');
+  crmToast(`Booking ${editId ? 'updated' : 'added'} for ${name}!`);
+  closeBookingModal();
+  renderCRMNav();
+  renderCRMPage();
+}
+
+async function deleteBooking(id) {
+  if (!confirm('Delete this booking?')) return;
+  const b = CRM.bookings.find(x => x.id === id);
+  CRM.bookings = CRM.bookings.filter(x => x.id !== id);
+  await storageSet('bookings', CRM.bookings);
+  if (b) addLog(`Booking deleted: ${b.name}`, 'warn');
+  crmToast('Booking deleted.', 'info');
+  renderCRMNav();
+  renderCRMPage();
+}
+
+function editBookingStatus(id) {
+  const b = CRM.bookings.find(x => x.id === id);
+  if (!b) return;
+  const s = prompt(`Change status for ${b.name}:\nConfirmed / Pending / Completed / Cancelled / No-Show`, b.status);
+  if (s) quickStatus(id, s);
+}
+
+// ══════════════════════════════════════
+//  CLIENTS
+// ══════════════════════════════════════
+function renderClients() {
+  return `
+  <div class="crm-topbar"><div><div class="crm-topbar-title">👥 Clients</div><div class="crm-topbar-sub">${CRM.clients.length} clients in your CRM</div></div></div>
+  <div class="crm-content">
+    <div class="card"><div class="table-wrap">
+      ${CRM.clients.length === 0 ? `<div class="empty-state"><div class="empty-icon">👥</div><h3>No clients yet</h3><p>Clients are added automatically when you save a booking.</p></div>` : `
+      <table>
+        <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Email</th><th>Service</th><th>Client Since</th><th>Newsletter</th></tr></thead>
+        <tbody>${CRM.clients.map(c => `
+          <tr>
+            <td><span style="font-family:monospace;font-size:.75rem;color:var(--teal);font-weight:700">${c.id}</span></td>
+            <td><strong>${c.name}</strong></td><td>${c.phone}</td>
+            <td style="font-size:.8rem">${c.email||'—'}</td>
+            <td>${c.service}</td><td>${c.since}</td>
+            <td><span class="badge ${c.newsletter?'badge-green':'badge-gray'}">${c.newsletter?'✓ Yes':'No'}</span></td>
+          </tr>`).join('')}
+        </tbody>
+      </table>`}
+    </div></div>
+  </div>`;
+}
+
+// ══════════════════════════════════════
+//  NEWSLETTER
+// ══════════════════════════════════════
+function renderNewsletter() {
+  const tab = window._nlTab || 'subscribers';
+  const defSubject = '✨ A Special Offer from Custom Cleaning RVA';
+  const defBody = `Hi [First Name]!\n\nWe hope your home is feeling fresh and clean. ✨\n\nAs a valued client of Custom Cleaning RVA, we wanted to reach out with a special offer just for you:\n\n🎉 BOOK YOUR NEXT CLEAN THIS MONTH AND SAVE 15%\n\nUse code: CLEANLIVING at checkout or mention this email when booking.\n\nReady to schedule?\n📞 Call/Text: (804) 814-5491\n📅 Book Online: RVACustomCleaning.com\n\nThank you for trusting us with your home.\n\nWarm regards,\nMichael Wilburn\nCustom Cleaning RVA\n\n---\nTo unsubscribe, reply STOP.`;
+  return `
+  <div class="crm-topbar"><div><div class="crm-topbar-title">💌 Newsletter</div><div class="crm-topbar-sub">${CRM.subscribers.length} subscribers · Manage and send emails</div></div></div>
+  <div class="crm-content">
+    <div class="crm-tabs">
+      <div class="crm-tab ${tab==='subscribers'?'active':''}" onclick="window._nlTab='subscribers';renderCRMPage()">Subscribers</div>
+      <div class="crm-tab ${tab==='compose'?'active':''}" onclick="window._nlTab='compose';renderCRMPage()">Compose &amp; Send</div>
+    </div>
+    ${tab==='subscribers' ? `
+    <div class="card" style="margin-bottom:1rem">
+      <div class="card-header"><div class="card-title">Add Subscriber</div></div>
+      <div class="card-body">
+        <div class="form-grid">
+          <div class="form-grp"><label>Email *</label><input id="nl-email" placeholder="client@email.com"></div>
+          <div class="form-grp"><label>First Name</label><input id="nl-name" placeholder="Jane"></div>
+        </div>
+        <button class="btn btn-p" style="margin-top:.75rem" onclick="addSubscriber()">+ Add Subscriber</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-title">Subscriber List (${CRM.subscribers.length})</div></div>
+      <div class="table-wrap">
+        ${CRM.subscribers.length===0 ? `<div class="empty-state"><div class="empty-icon">💌</div><h3>No subscribers yet</h3><p>Subscribers are added when clients opt-in during booking.</p></div>` : `
+        <table>
+          <thead><tr><th>Email</th><th>Name</th><th>Date Added</th><th>Source</th><th></th></tr></thead>
+          <tbody>${CRM.subscribers.map((s,i) => `
+            <tr>
+              <td>${s.email}</td><td>${s.name||'—'}</td><td>${s.dateAdded}</td>
+              <td><span class="badge badge-blue">${s.source}</span></td>
+              <td><button class="btn btn-d btn-xs" onclick="removeSubscriber(${i})">Remove</button></td>
+            </tr>`).join('')}
+          </tbody>
+        </table>`}
+      </div>
+    </div>` : `
+    <div class="card">
+      <div class="card-header"><div class="card-title">Compose Newsletter</div></div>
+      <div class="card-body">
+        <div style="background:linear-gradient(135deg,#0d1f2d,#1a3a4a);border-radius:var(--r);padding:1.5rem;text-align:center;color:#fff;margin-bottom:1rem">
+          <div style="font-size:1.5rem;margin-bottom:.4rem">✨</div>
+          <div style="font-size:1.1rem;font-weight:700">Custom Cleaning RVA</div>
+          <div style="font-size:.8rem;opacity:.7">Richmond's trusted residential cleaning service</div>
+        </div>
+        <div class="form-grp" style="margin-bottom:.9rem"><label>Subject Line</label><input id="nl-subject" value="${defSubject}"></div>
+        <div class="form-grp" style="margin-bottom:1rem">
+          <label>Email Body</label>
+          <textarea id="nl-body" rows="14">${defBody}</textarea>
+          <div class="form-hint">Use [First Name] for personalization. Sends to all ${CRM.subscribers.length} subscriber${CRM.subscribers.length!==1?'s':''}.</div>
+        </div>
+        <button class="btn btn-p" id="sendNlBtn" onclick="sendNewsletter()" ${CRM.subscribers.length===0?'disabled':''}>
+          📧 Send to All ${CRM.subscribers.length} Subscribers
+        </button>
+        ${CRM.subscribers.length===0 ? `<div class="form-hint" style="margin-top:.5rem;color:var(--red)">Add subscribers first.</div>` : ''}
+        <div id="nlResult" style="margin-top:1rem"></div>
+      </div>
+    </div>`}
+  </div>`;
+}
+
+async function addSubscriber() {
+  const email = document.getElementById('nl-email').value.trim();
+  const name  = document.getElementById('nl-name').value.trim();
+  if (!email) { crmToast('Email required.', 'error'); return; }
+  if (CRM.subscribers.find(s => s.email === email)) { crmToast('Already subscribed.', 'error'); return; }
+  CRM.subscribers.unshift({ email, name, dateAdded: new Date().toLocaleDateString(), source: 'Manual' });
+  await storageSet('subscribers', CRM.subscribers);
+  crmToast('Subscriber added!');
+  addLog(`Subscriber added manually: ${email}`, 'ok');
+  renderCRMNav();
+  renderCRMPage();
+}
+
+async function removeSubscriber(idx) {
+  if (!confirm('Remove this subscriber?')) return;
+  const s = CRM.subscribers[idx];
+  CRM.subscribers.splice(idx, 1);
+  await storageSet('subscribers', CRM.subscribers);
+  crmToast('Subscriber removed.', 'info');
+  addLog(`Subscriber removed: ${s.email}`, 'warn');
+  renderCRMNav();
+  renderCRMPage();
+}
+
+async function sendNewsletter() {
+  const subject = document.getElementById('nl-subject').value;
+  const body    = document.getElementById('nl-body').value;
+  if (!subject || !body) { crmToast('Subject and body required.', 'error'); return; }
+  const btn = document.getElementById('sendNlBtn');
+  if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Sending...'; }
+  const resultEl = document.getElementById('nlResult');
+  try {
+    const prompt = `Send a newsletter email from Custom Cleaning RVA to all subscribers.\n\nSubscribers: ${CRM.subscribers.map(s=>s.email).join(', ')}\n\nSubject: ${subject}\n\nBody:\n${body}\n\nSend as a professional HTML email. Replace [First Name] with each subscriber's first name where possible.`;
+    const data = await callClaude(
+      [{role:'user',content:prompt}],
+      [{type:'url',url:'https://gmail.mcp.claude.com/mcp',name:'gmail'}],
+      'You are a newsletter assistant for Custom Cleaning RVA. Use Gmail to send bulk emails.'
+    );
+    const txt = data.content.filter(b=>b.type==='text').map(b=>b.text).join('\n');
+    if (resultEl) resultEl.innerHTML = `<div style="padding:1rem;border-radius:8px;background:var(--green-l);color:var(--green);font-size:.85rem">✅ Newsletter sent to ${CRM.subscribers.length} subscribers!<br><small>${txt.slice(0,200)}</small></div>`;
+    addLog(`💌 Newsletter sent to ${CRM.subscribers.length} subscribers: "${subject}"`, 'ok');
+    crmToast(`Newsletter sent to ${CRM.subscribers.length} subscribers!`);
+  } catch(e) {
+    if (resultEl) resultEl.innerHTML = `<div style="padding:1rem;border-radius:8px;background:var(--red-l);color:var(--red);font-size:.85rem">❌ Failed: ${e.message}</div>`;
+    addLog(`❌ Newsletter failed: ${e.message}`, 'err');
+    crmToast('Newsletter failed. Check Gmail connection.', 'error');
+  }
+  if (btn) { btn.disabled = false; btn.innerHTML = `📧 Send to All ${CRM.subscribers.length} Subscribers`; }
+}
+
+// ══════════════════════════════════════
+//  CALENDAR SYNC
+// ══════════════════════════════════════
+function renderCalendar() {
+  const upcoming = CRM.bookings.filter(b => b.status === 'Confirmed' || b.status === 'Pending');
+  return `
+  <div class="crm-topbar"><div><div class="crm-topbar-title">🗓️ Google Calendar Sync</div><div class="crm-topbar-sub">Auto-add bookings to your Google Calendar</div></div></div>
+  <div class="crm-content">
+    <div class="card" style="margin-bottom:1rem">
+      <div class="card-header"><div class="card-title">Add Booking to Calendar</div></div>
+      <div class="card-body">
+        <div class="form-grp" style="margin-bottom:.9rem">
+          <label>Select Booking to Sync</label>
+          <select id="cal-select">
+            <option value="">— Choose a booking —</option>
+            ${upcoming.map(b=>`<option value="${b.id}">${b.name} — ${b.service} — ${b.preferredDate} ${b.timeSlot||''}</option>`).join('')}
+          </select>
+          ${upcoming.length===0 ? '<div class="form-hint">No confirmed/pending bookings. Add some first.</div>' : ''}
+        </div>
+        <div id="calPreview"></div>
+        <div style="margin-top:1rem">
+          <button class="btn btn-p" id="calBtn" onclick="syncToCalendar()">📅 Add to Google Calendar</button>
+        </div>
+        <div id="calResult" style="margin-top:1rem"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-title">📋 All Confirmed Bookings</div></div>
+      <div class="table-wrap">
+        ${upcoming.length===0 ? `<div class="empty-state"><div class="empty-icon">🗓️</div><h3>No upcoming bookings</h3></div>` : `
+        <table>
+          <thead><tr><th>Booking ID</th><th>Client</th><th>Service</th><th>Date</th><th>Time</th><th>Status</th></tr></thead>
+          <tbody>${upcoming.map(b=>`
+            <tr>
+              <td><span style="font-family:monospace;font-size:.72rem;color:var(--teal)">${b.id}</span></td>
+              <td><strong>${b.name}</strong></td><td>${b.service}</td>
+              <td>${b.preferredDate}</td><td>${b.timeSlot||'—'}</td>
+              <td>${statusBadge(b.status)}</td>
+            </tr>`).join('')}
+          </tbody>
+        </table>`}
+      </div>
+    </div>
+  </div>`;
+}
+
+async function syncToCalendar() {
+  const id = document.getElementById('cal-select').value;
+  if (!id) { crmToast('Please select a booking first.', 'error'); return; }
+  const b = CRM.bookings.find(x => x.id === id);
+  if (!b) return;
+  const btn = document.getElementById('calBtn');
+  if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Adding to Calendar...'; }
+  const resultEl = document.getElementById('calResult');
+  try {
+    const prompt = `Add a Google Calendar event:\nTitle: 🧹 ${b.service} — ${b.name}\nDate: ${b.preferredDate}\nTime: ${b.timeSlot}\nLocation: ${b.address}\nClient Phone: ${b.phone}\nNotes: ${b.notes||'None'}\nEst. Price: $${b.price||'TBD'}\nDuration: 2 hours\nAdd a 24-hour reminder.`;
+    const data = await callClaude(
+      [{role:'user',content:prompt}],
+      [{type:'url',url:'https://gcal.mcp.claude.com/mcp',name:'gcal'}],
+      'You are a calendar assistant for Custom Cleaning RVA. Use Google Calendar to create events.'
+    );
+    const txt = data.content.filter(b=>b.type==='text').map(b=>b.text).join('\n');
+    if (resultEl) resultEl.innerHTML = `<div style="padding:1rem;border-radius:8px;background:var(--green-l);color:var(--green);font-size:.85rem">✅ Calendar event created for ${b.name}!<br><small>${txt.slice(0,200)}</small></div>`;
+    addLog(`📅 Calendar event created: ${b.name} on ${b.preferredDate}`, 'ok');
+    crmToast(`Calendar event added for ${b.name}!`);
+  } catch(e) {
+    if (resultEl) resultEl.innerHTML = `<div style="padding:1rem;border-radius:8px;background:var(--red-l);color:var(--red);font-size:.85rem">❌ Calendar sync failed: ${e.message}</div>`;
+    addLog(`❌ Calendar sync failed: ${e.message}`, 'err');
+    crmToast('Calendar sync failed.', 'error');
+  }
+  if (btn) { btn.disabled = false; btn.innerHTML = '📅 Add to Google Calendar'; }
+}
+
+// ══════════════════════════════════════
+//  SMS PAGE
+// ══════════════════════════════════════
+function renderSMS() {
+  return `
+  <div class="crm-topbar"><div><div class="crm-topbar-title">📱 Send SMS</div><div class="crm-topbar-sub">Send text messages to clients via Gmail SMS gateway</div></div></div>
+  <div class="crm-content">
+    <div class="info-box yellow" style="margin-bottom:1rem">
+      <strong>ℹ️ How SMS Works:</strong> Messages are sent via email-to-SMS carrier gateways using your connected Gmail. Select the client's carrier below.
+    </div>
+    <div class="card">
+      <div class="card-header"><div class="card-title">Compose &amp; Send SMS</div></div>
+      <div class="card-body">
+        <div class="form-grid">
+          <div class="form-grp">
+            <label>Select Client</label>
+            <select id="sms-to" onchange="updateSMSPreview()">
+              <option value="">— Choose client —</option>
+              ${CRM.clients.map(c=>`<option value="${c.id}">${c.name} — ${c.phone}</option>`).join('')}
+            </select>
+          </div>
+          <div class="form-grp">
+            <label>Client's Carrier</label>
+            <select id="sms-carrier" onchange="updateSMSPreview()">
+              <option value="att">AT&amp;T</option><option value="verizon">Verizon</option>
+              <option value="tmobile">T-Mobile</option><option value="sprint">Sprint</option>
+              <option value="boost">Boost Mobile</option>
+            </select>
+          </div>
+          <div class="form-grp form-full">
+            <label>Message Template</label>
+            <select id="sms-type" onchange="updateSMSPreview()">
+              <option value="confirmation">✅ Booking Confirmation</option>
+              <option value="reminder">⏰ Appointment Reminder (Day Before)</option>
+              <option value="complete">🧹 Job Complete — Thank You</option>
+              <option value="review">⭐ Request a Google Review</option>
+              <option value="custom">✏️ Custom Message</option>
+            </select>
+          </div>
+          <div class="form-grp form-full">
+            <label>Message Preview</label>
+            <textarea id="sms-msg" rows="4"></textarea>
+            <div class="form-hint" id="sms-char">0/160 characters</div>
+          </div>
+        </div>
+        <div id="sms-gateway" class="sms-preview-box" style="display:none"></div>
+        <div style="margin-top:1rem">
+          <button class="btn btn-p" id="smsBtn" onclick="sendSMS()">📱 Send SMS via Gmail</button>
+        </div>
+        <div id="smsResult" style="margin-top:1rem"></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function updateSMSPreview() {
+  const toId    = document.getElementById('sms-to')?.value;
+  const carrier = document.getElementById('sms-carrier')?.value || 'att';
+  const type    = document.getElementById('sms-type')?.value || 'confirmation';
+  const msgEl   = document.getElementById('sms-msg');
+  const charEl  = document.getElementById('sms-char');
+  const gwEl    = document.getElementById('sms-gateway');
+  const client  = CRM.clients.find(c => c.id === toId);
+  const fn = client ? client.name.split(' ')[0] : 'there';
+
+  const templates = {
+    confirmation: `Hi ${fn}! 👋 This is Custom Cleaning RVA confirming your upcoming cleaning appointment. Reply STOP to opt out. Questions? Call/text (804) 814-5491.`,
+    reminder:     `Hi ${fn}! 🧹 Reminder: Your Custom Cleaning RVA appointment is TOMORROW. Our team will arrive at your scheduled time. See you then! — Custom Cleaning RVA`,
+    complete:     `Hi ${fn}! ✨ Your home is sparkling clean! Hope you love it. If anything missed expectations, reply within 24 hrs — we'll make it right. Thank you! — Custom Cleaning RVA`,
+    review:       `Hi ${fn}! We loved serving you 🌟 If you enjoyed your clean, would you mind leaving us a quick Google review? It helps us a ton! Thanks — Custom Cleaning RVA`,
+    custom:       msgEl?.value || ''
+  };
+
+  if (type !== 'custom' && msgEl) {
+    msgEl.value = templates[type] || '';
+    msgEl.readOnly = true;
+    msgEl.style.background = 'var(--gray-light)';
+  } else if (msgEl) {
+    msgEl.readOnly = false;
+    msgEl.style.background = '#fff';
+  }
+
+  const msg = msgEl?.value || '';
+  if (charEl) charEl.textContent = `${msg.length}/160 characters ${msg.length > 160 ? '⚠️ Will send as multiple SMS' : '✅ Single SMS'}`;
+
+  if (client && gwEl) {
+    const addr = smsEmail(client.phone, carrier);
+    gwEl.style.display = 'block';
+    gwEl.innerHTML = `<strong>SMS Gateway:</strong> ${addr}<br><span style="color:var(--gray)">Message will be delivered as SMS to ${client.phone}</span>`;
+  } else if (gwEl) {
+    gwEl.style.display = 'none';
+  }
+}
+
+async function sendSMS() {
+  const toId    = document.getElementById('sms-to')?.value;
+  const carrier = document.getElementById('sms-carrier')?.value || 'att';
+  const msg     = document.getElementById('sms-msg')?.value;
+  const client  = CRM.clients.find(c => c.id === toId);
+  if (!client) { crmToast('Select a client first.', 'error'); return; }
+  if (!msg)    { crmToast('Message is empty.', 'error'); return; }
+
+  const btn = document.getElementById('smsBtn');
+  const resultEl = document.getElementById('smsResult');
+  if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Sending...'; }
+
+  const smsAddr = smsEmail(client.phone, carrier);
+  try {
+    const prompt = `Send an SMS to a client via email-to-SMS gateway.\n\nSend an email to: ${smsAddr}\nSubject: Custom Cleaning RVA\nBody: ${msg}\n\nThis email will be delivered as an SMS to the client's phone.`;
+    const data = await callClaude(
+      [{role:'user',content:prompt}],
+      [{type:'url',url:'https://gmail.mcp.claude.com/mcp',name:'gmail'}],
+      'You are a messaging assistant for Custom Cleaning RVA. Use Gmail to send emails.'
+    );
+    const txt = data.content.filter(b=>b.type==='text').map(b=>b.text).join('\n');
+    if (resultEl) resultEl.innerHTML = `<div style="padding:1rem;border-radius:8px;background:var(--green-l);color:var(--green);font-size:.85rem">✅ SMS sent to ${client.name}!</div>`;
+    addLog(`📱 SMS sent to ${client.name} (${client.phone}) via ${carrier.toUpperCase()}`, 'ok');
+    crmToast(`SMS sent to ${client.name}!`);
+  } catch(e) {
+    if (resultEl) resultEl.innerHTML = `<div style="padding:1rem;border-radius:8px;background:var(--red-l);color:var(--red);font-size:.85rem">❌ SMS failed: ${e.message}</div>`;
+    addLog(`❌ SMS failed: ${e.message}`, 'err');
+    crmToast('SMS send failed. Check Gmail connection.', 'error');
+  }
+  if (btn) { btn.disabled = false; btn.innerHTML = '📱 Send SMS via Gmail'; }
+}
+
+// ══════════════════════════════════════
+//  LOGS
+// ══════════════════════════════════════
+function renderLogs() {
+  return `
+  <div class="crm-topbar"><div><div class="crm-topbar-title">📋 Activity Logs</div><div class="crm-topbar-sub">All CRM activity tracked here</div></div>
+    <div class="crm-topbar-actions"><button class="btn btn-o btn-sm" onclick="clearLogs()">Clear Logs</button></div>
+  </div>
+  <div class="crm-content">
+    <div class="card">
+      <div class="card-body" style="padding:1rem">
+        ${CRM.logs.length === 0 ? `<div class="empty-state"><div class="empty-icon">📋</div><h3>No activity yet</h3><p>Actions like adding bookings and sending SMS will appear here.</p></div>` : `
+        <div class="log-wrap">
+          ${CRM.logs.map(l=>`<div class="log-entry"><span class="log-time">[${l.time}]</span> <span class="log-${l.level}">${l.msg}</span></div>`).join('')}
+        </div>`}
+      </div>
+    </div>
+  </div>`;
+}
+
+async function clearLogs() {
+  if (!confirm('Clear all activity logs?')) return;
+  CRM.logs = [];
+  await storageSet('logs', []);
+  renderCRMPage();
+}
+
+// ══════════════════════════════════════
+//  UTILS
+// ══════════════════════════════════════
+function statusBadge(s) {
+  const map = { Confirmed:'badge-green', Pending:'badge-yellow', Cancelled:'badge-red', Completed:'badge-blue', 'No-Show':'badge-gray' };
+  return `<span class="badge ${map[s||'Pending']||'badge-gray'}">${s||'—'}</span>`;
+}
+
+function bindCRMEvents() {
+  // Wire up SMS preview after render
+  if (CRM.page === 'sms') {
+    updateSMSPreview();
+    const msgEl = document.getElementById('sms-msg');
+    if (msgEl) msgEl.addEventListener('input', () => {
+      const charEl = document.getElementById('sms-char');
+      if (charEl) charEl.textContent = `${msgEl.value.length}/160 characters ${msgEl.value.length > 160 ? '⚠️ Will send as multiple SMS' : '✅ Single SMS'}`;
+    });
+  }
+  // Wire up calendar preview
+  if (CRM.page === 'calendar') {
+    const sel = document.getElementById('cal-select');
+    if (sel) sel.addEventListener('change', () => {
+      const b = CRM.bookings.find(x => x.id === sel.value);
+      const prev = document.getElementById('calPreview');
+      if (b && prev) {
+        prev.innerHTML = `<div style="background:var(--gray-light);border-radius:8px;padding:8px;padding:1rem;margin-top:.75rem;font-size:.85rem"><strong>📋 Event Preview:</strong><br><span style="color:var(--teal);font-weight:700">🧹 ${b.service} — ${b.name}</span><br>📅 ${b.preferredDate} at ${b.timeSlot||'TBD'} · 📍 ${b.address}<br>📞 ${b.phone}${b.email?' · ✉️ '+b.email:''}${b.notes?'<br>📝 '+b.notes:''}</div>`;
+      } else if (prev) {
+        prev.innerHTML = '';
+      }
+    });
+  }
+}
+</script>
+</body>
+</html>
